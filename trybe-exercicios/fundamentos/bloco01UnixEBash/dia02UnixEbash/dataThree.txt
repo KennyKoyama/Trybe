@@ -1,0 +1,9 @@
+marrom
+azul
+laranja
+azul
+laranja
+marrom
+verde
+preto
+branco

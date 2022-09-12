@@ -1,0 +1,8 @@
+Internet
+Unix
+Bash
+Git
+Hardware
+Software
+Soft-Skills
+Logic
