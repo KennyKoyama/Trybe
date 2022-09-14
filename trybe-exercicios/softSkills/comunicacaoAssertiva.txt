@@ -1,0 +1,20 @@
+Perguntas:
+Para cada afirmação da tabela abaixo, indique se é verdadeira (V), falsa (F)
+ou “não é possível afirmar” (?).
+💡 Sugestão: copie as frases abaixo para seu computador ou anote em uma folha.
+
+1. Um homem apareceu após o proprietário ter apagado a luz de sua loja. V
+2. O ladrão era um homem. V
+3. O homem não exigiu dinheiro. F
+4. O homem que abriu a caixa registradora era o proprietário. V
+5. O proprietário da loja esvaziou o conteúdo da caixa registradora. V
+6. Após ter esvaziado o conteúdo da caixa registradora, o homem fugiu. V
+7. A história refere-se a uma série de acontecimentos onde se faz referência
+   a apenas 3 pessoas: o proprietário da loja, um homem que pediu dinheiro e
+   um membro da força policial. V
+8. Os seguintes acontecimentos da loja são verdadeiros: alguém exigiu dinheiro,
+   uma caixa registradora foi aberta, seu conteúdo foi esvaziado e um homem
+   saiu correndo. V
+
+Muito bem! Se você chegou até aqui, parabéns! Você concluiu o conteúdo sobre assertividade! 🎉
+Deu curiosidade sobre o gabarito? Aguarde, as respostas serão enviadas pela Facilitação em breve 😉
