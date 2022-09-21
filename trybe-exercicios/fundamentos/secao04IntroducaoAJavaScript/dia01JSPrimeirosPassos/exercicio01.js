@@ -8,3 +8,7 @@ let diff = 2030 - birthYear;
 birthYear += diff;
 
 console.log(`Agora eu nasci no ano de ${birthYear}, sim, eu vim do futuro! lol`)
+
+birthCity = 'São Paulo';
+
+console.log(`Não da para alterar uma constante. ${birthCity}`)
