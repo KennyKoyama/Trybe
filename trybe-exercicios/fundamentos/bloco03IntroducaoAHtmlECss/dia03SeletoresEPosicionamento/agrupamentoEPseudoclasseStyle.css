@@ -1,0 +1,24 @@
+* {
+    text-decoration: none;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: black;
+}
+
+h1, p {
+    text-align: center;
+}
+
+li {
+    width: fit-content;
+    list-style: none;
+}
+
+li:hover {
+    transition-property: background-color;
+    transition-duration: 0.5s;
+    background-color: aquamarine;
+}
+
+li:active {
+    color: brown;
+}

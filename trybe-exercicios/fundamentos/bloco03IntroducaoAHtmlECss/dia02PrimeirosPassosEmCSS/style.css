@@ -1,0 +1,33 @@
+body {
+    font-size: 16px;
+}
+h1 {
+    font-family: sans-serif;
+    font-size: 3em;
+    color: orange;
+    text-align: center;
+    text-decoration: underline;
+
+}
+ul {
+    background-color: darkred;
+}
+.bg {
+    background-color: salmon;
+}
+p {
+    font-weight: 600;
+    font-style: italic;
+}
+.yellow {
+    background-color: yellow;
+}
+.red {
+    background-color: red;
+}
+.brown {
+    background-color: brown;
+}
+li {
+    line-height: 200%;
+}

@@ -1,0 +1,60 @@
+ol li {
+    background-color: yellow;
+    color: green;
+    
+}
+
+ol li:nth-child(odd) {
+    text-transform: uppercase;
+    color: black;
+}
+
+li {
+    font-size: 20px;
+}
+
+li em {
+    font-weight: bold;
+}
+
+h1, h3 {
+    color: red;
+}
+
+h1 em, h3 em {
+    font-size: 40px;
+    border: 1px solid black;
+}
+
+ul:first-of-type li:nth-child(-n+3) {
+    color: blue;
+}
+
+.java {
+    background-color: pink;
+}
+
+li a[href*='stack']:hover {
+    color: #f48024;
+    font-weight: bold;
+}
+
+li a[href*='w3s']:hover {
+    color: #04AA6D;
+    font-weight: bold;
+}
+
+li a[href*='moz']:hover {
+    color: black;
+    font-weight: bold;
+}
+
+li a[href*='devdocs']:hover {
+    color: yellow;
+    font-weight: bold;
+}
+
+li a[href*='trybe']:hover {
+    color: rgb(96,190,144);
+    font-weight: bold;
+}

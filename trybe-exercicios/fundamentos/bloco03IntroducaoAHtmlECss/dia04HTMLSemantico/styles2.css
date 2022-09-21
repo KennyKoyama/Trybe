@@ -1,0 +1,86 @@
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+header {
+    background-color: darkblue;
+    padding: 1rem;
+    text-align: center;
+}
+
+nav ul {
+    text-align: end;
+    background-color: rgb(6, 43, 84);
+    height: 2rem;
+}
+nav ul li{
+    display: inline-block;
+    padding: 0.2rem 0.5rem;
+    
+}
+nav ul li a {
+    text-decoration: none;
+    font-weight: bold;
+}
+nav ul li a:hover {
+    color: rgb(189, 93, 189);
+    text-shadow: 0 0 1em;
+}
+
+body {
+    width: 800px;
+}
+
+img {
+    width: 100%;
+}
+
+main {
+    background-color: rgb(0, 0, 53);
+    padding: 2rem;
+}
+
+main h2 {
+    text-decoration: underline;
+    margin-bottom: 1.5rem;
+}
+
+.classificacao {
+    float: right;
+    background-color: black;
+    border: 1px solid;
+    margin-left: 1rem;
+    border-radius: 0.1em;
+    padding: 1em;
+    text-align: justify;
+}
+
+.classificacao caption {
+    font-weight: bold;
+    margin-bottom: 1em;
+}
+
+.introducao p {
+    margin-top: 0.5em;
+}
+.visao, .patas, .femea, .referencias, .video {
+    margin-top: 3rem;
+}
+
+footer {
+    background-color: aliceblue;
+    text-align: center;
+    font-weight: bold;
+}
+
+footer p {
+    color: black;
+}
+
+iframe {
+    display: none;
+}
