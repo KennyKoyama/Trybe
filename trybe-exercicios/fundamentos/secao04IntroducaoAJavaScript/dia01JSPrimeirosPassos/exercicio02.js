@@ -13,3 +13,5 @@ console.log(`A variável patientEmail é do tipo primitivo ${typeof patientEmail
 
 console.log(`A variável patientAge é do tipo primitivo ${typeof patientAge} pois ela não foi declarada`)
 
+patientId = '50';
+console.log(`A variável patientId mudou para o tipo primitivo ${typeof patientId}`)
