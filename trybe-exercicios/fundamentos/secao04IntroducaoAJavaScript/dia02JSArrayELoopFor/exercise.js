@@ -35,7 +35,13 @@ for (const number of numbers) {
 }
 console.log(count === 0 ? 'No odd numbers found' : count);
 
+
 // Utilizando for, descubra qual o menor valor contido no array e imprima-o;
+let smallest = Math.max(...numbers);
+for (const number of numbers) {
+    smallest = number < smallest ? number : smallest;
+}
+console.log(smallest)
 
 
 // Utilizando for, crie um array que vá de 1 até 25 e imprima o resultado;
