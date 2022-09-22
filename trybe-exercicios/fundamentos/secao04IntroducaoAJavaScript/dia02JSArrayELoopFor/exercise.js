@@ -23,12 +23,17 @@ console.log((numbers.reduce((sum,current) => sum + current, 0)) / numbers.length
 let biggest = 0;
 for (const number of numbers) {
     biggest = biggest > number ? biggest : number;
-}
-console.log(biggest)
+};
+console.log(biggest);
 
 
 // Descubra quantos valores ímpares existem no array e imprima o resultado. Caso não exista nenhum, imprima a mensagem: “nenhum valor ímpar encontrado”;
-
+let count = 0;
+let isOdd = (value) => value % 2 != 0;
+for (const number of numbers) {
+    if(isOdd(number)) count += 1;
+}
+console.log(count === 0 ? 'No odd numbers found' : count);
 
 // Utilizando for, descubra qual o menor valor contido no array e imprima-o;
 
