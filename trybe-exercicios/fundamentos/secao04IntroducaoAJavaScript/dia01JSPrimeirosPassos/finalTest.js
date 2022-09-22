@@ -109,3 +109,19 @@ const price = a > b ? a : b;
 if (cost < 0 || price < 0) return 'Invalid value';
 const profitSelling1K = (price * 1000) - (cost * 1000);
 console.log(`Price ${price} - cost ${cost} x 1000 = ${profitSelling1K}`);
+
+
+let random = Math.random() * 6000;
+let grossSalary = random < 1200 ? 1200.00 : random.toFixed(2);
+const taxINSS = grossSalary <= 1556.94 ? grossSalary * 0.08
+              : grossSalary <= 2594.92 ? grossSalary * 0.09
+              : grossSalary <= 5189.82 ? grossSalary * 0.11
+              : 570.88;
+const baseSalary = grossSalary - taxINSS;
+const taxIR = baseSalary <= 1903.98 ? 0
+            : baseSalary <= 2826.65 ? (baseSalary * 0.075) - 142.80
+            : baseSalary <= 3751.05 ? (baseSalary * 0.15) - 354.80
+            : baseSalary <= 4664.68 ? (baseSalary * 0.225) - 636.13
+            : (baseSalary * 0.275) - 869.36;
+const netSalary = (baseSalary - taxIR).toFixed(2);
+console.log(`Gross = ${grossSalary} / Base = ${baseSalary} / Net = ${netSalary}`);
