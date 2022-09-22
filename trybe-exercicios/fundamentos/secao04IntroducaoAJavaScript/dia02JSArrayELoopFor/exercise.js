@@ -53,3 +53,6 @@ console.log(array25)
 
 
 // Utilizando o array que acabou de criar, imprima o resultado da divisão de cada um dos elementos por 2.
+for (const number of array25) {
+    console.log(number / 2)
+}
