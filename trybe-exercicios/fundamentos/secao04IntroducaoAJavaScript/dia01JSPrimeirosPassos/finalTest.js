@@ -124,4 +124,10 @@ const taxIR = baseSalary <= 1903.98 ? 0
             : baseSalary <= 4664.68 ? (baseSalary * 0.225) - 636.13
             : (baseSalary * 0.275) - 869.36;
 const netSalary = (baseSalary - taxIR).toFixed(2);
+const convertToString = netSalary.toString()
+                                 .split('')
+                                 .map((element) => /\d/.test(element) ? element : ',')
+                                 .join('');
 console.log(`Gross = ${grossSalary} / Base = ${baseSalary} / Net = ${netSalary}`);
+let result = `R$ ${convertToString}`;
+console.log(result)
