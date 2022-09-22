@@ -33,3 +33,38 @@ const isTriangle = (angleA, angleB, angleC) => angleA < 0 || angleB < 0 || angle
                                              : angleA + angleB + angleC === 180;
 console.log(`angle A ${a}, angle B ${b} and angle C ${c} is triangle? ${isTriangle(a, b, c)}`);
 console.log(`angle A ${45}, angle B ${45} and angle C ${90} is triangle? ${isTriangle(45, 45, 90)}`);
+
+
+let chessPiece = 'kInG';
+let chessPieceLowerCase = chessPiece.toLowerCase();
+// Can save the value on the same string but I want print the original value
+switch (chessPieceLowerCase) {
+    
+    case 'pawn':
+        console.log(`${chessPiece} moves one square forward, two squares when on its start square and diagonal to capture enemy piece`);
+        break;
+
+    case 'knight':
+        console.log(`${chessPiece} moves from one corner of any two-by-three rectangle to the opposite corner, can jump other pieces`);
+        break;
+
+    case 'bishop':
+        console.log(`${chessPiece} move any number of squares diagonally without jumping`);
+        break;
+
+    case 'rook':
+        console.log(`${chessPiece} move any number of squares vertically or horizontally without jumping`);
+        break;
+
+    case 'queen':
+        console.log(`${chessPiece} move any number of squares vertically, horizontally, or diagonally without jumping`);
+        break;
+
+    case 'king':
+        console.log(`${chessPiece} move to any adjoining square`);
+        break;
+
+    default:
+        console.log(`${chessPiece} is not a valid chess piece`);
+        break;
+}
