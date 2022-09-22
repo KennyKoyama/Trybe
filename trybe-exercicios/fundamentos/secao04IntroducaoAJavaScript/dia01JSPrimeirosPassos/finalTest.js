@@ -11,3 +11,12 @@ const exponent = a ** b;
 
 const greater = a > b ? a : b;
 const greaterBetween3 = greater > c ? greater : c;
+
+const isPositive = (value) => value > 0 ? 'Positive' 
+                            : value < 0 ? 'Negative'
+                            : value === 0 ? 'Zero'
+                            : 'Invalid value';
+console.log(isPositive(1));
+console.log(isPositive(-1));
+console.log(isPositive(0));
+
