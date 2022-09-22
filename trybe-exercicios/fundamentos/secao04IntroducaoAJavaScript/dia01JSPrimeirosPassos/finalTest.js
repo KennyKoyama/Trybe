@@ -3,6 +3,7 @@ let b = Math.floor(Math.random() * 90);
 let c = Math.floor(Math.random() * 90);
 console.log(`a = ${a}  b = ${b}  c = ${c}`);
 
+
 const sum = a + b;
 const subtraction = a - b;
 const multiplication = a * b;
@@ -16,10 +17,12 @@ console.log(`${a} / ${b} = ${division}`);
 console.log(`${a} % ${b} = ${remainder}`);
 console.log(`${a} ** ${b} = ${exponent}`);
 
+
 const greater = a > b ? a : b;
 const greaterBetween3 = greater > c ? greater : c;
 console.log(`Greater between ${a} and ${b} = ${greater}`);
 console.log(`Greater between ${a}, ${b} and ${c} = ${greaterBetween3}`);
+
 
 const isPositive = (value) => value > 0 ? 'Positive' 
                             : value < 0 ? 'Negative'
@@ -28,6 +31,7 @@ const isPositive = (value) => value > 0 ? 'Positive'
 console.log(`1 is ${isPositive(1)}`);
 console.log(`-1 is ${isPositive(-1)}`);
 console.log(`0 is ${isPositive(0)}`);
+
 
 const isTriangle = (angleA, angleB, angleC) => angleA < 0 || angleB < 0 || angleC < 0 ? 'Invalid angle'
                                              : angleA + angleB + angleC === 180;
@@ -73,21 +77,28 @@ switch (chessPieceLowerCase) {
 let score = Math.floor(Math.random() * 100);
 if (score < 0 || score > 100 || typeof score != 'number') return `${score} in invalid`;
 if (score >= 90) {
-    console.log('A');
-    return 'A'
+    console.log(`${score} is A`);
+    // return 'A'
 } else if (score >= 80 && score < 90) {
-    console.log('B');
-    return 'B'
+    console.log(`${score} is B`);
+    // return 'B'
 } else if (score >= 70 && score < 80) {
-    console.log('C');
-    return 'C'
+    console.log(`${score} is C`);
+    // return 'C'
 } else if (score >= 60 && score < 70) {
-    console.log('D');
-    return 'D'
+    console.log(`${score} is D`);
+    // return 'D'
 } else if (score >= 50 && score < 60) {
-    console.log('E');
-    return 'E'
+    console.log(`${score} is E`);
+    // return 'E'
 } else {
-    console.log('F');
-    return 'F'
+    console.log(`${score} is F`);
+    // return 'F'
 };
+
+const isEven = a % 2 == 0 || b % 2 == 0 || c % 2 == 0;
+console.log(`${a}, ${b} or ${c} is even? ${isEven}`);
+
+const isOdd = a % 2 != 0 || b % 2 != 0 || c % 2 != 0;
+console.log(`${a}, ${b} or ${c} is odd? ${isOdd}`);
+
