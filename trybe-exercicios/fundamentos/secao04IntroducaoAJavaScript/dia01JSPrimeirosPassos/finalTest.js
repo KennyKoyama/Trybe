@@ -96,9 +96,16 @@ if (score >= 90) {
     // return 'F'
 };
 
+
 const isEven = a % 2 == 0 || b % 2 == 0 || c % 2 == 0;
 console.log(`${a}, ${b} or ${c} is even? ${isEven}`);
 
 const isOdd = a % 2 != 0 || b % 2 != 0 || c % 2 != 0;
 console.log(`${a}, ${b} or ${c} is odd? ${isOdd}`);
 
+
+const cost = a < b ? a + (a * 0.2) : b + (b * 0.2);
+const price = a > b ? a : b;
+if (cost < 0 || price < 0) return 'Invalid value';
+const profitSelling1K = (price * 1000) - (cost * 1000);
+console.log(`Price ${price} - cost ${cost} x 1000 = ${profitSelling1K}`);
