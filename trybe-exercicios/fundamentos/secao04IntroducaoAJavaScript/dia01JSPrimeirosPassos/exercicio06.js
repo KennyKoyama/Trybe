@@ -19,4 +19,4 @@ switch (status) {
     default:
         console.log(`Wrong information`)
         break;
-}
+};
