@@ -17,6 +17,6 @@ if (score >= 80) {
     result = `Your score is ${score}. You're on our waiting list!`;
 } else {
     result = `Your score is ${score}. Sorry, you've not been approved!`;
-}
+};
 
 console.log(result);
