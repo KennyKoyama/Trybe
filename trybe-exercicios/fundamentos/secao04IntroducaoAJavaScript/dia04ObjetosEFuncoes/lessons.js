@@ -38,3 +38,37 @@ let car = {
 for (const key in car) {
     console.log(key + ':', car[key]);
 };
+
+
+// Faça cinco programas, um para cada operação aritmética básica. Seu programa deve ter duas constantes, a e b, definidas no começo com os valores que serão operados. Faça programas para:
+// Adição (a + b)
+function sum (num1, num2) {
+    return num1 + num2;
+};
+console.log(sum(10, 20));
+
+// Subtração (a - b)
+function subtraction (num1, num2) {
+    return num1 - num2;
+};
+console.log(subtraction(20, 10));
+
+// Multiplicação (a * b)
+function multiplication (num1, num2) {
+    return num1 * num2;
+};
+console.log(multiplication(3, 10));
+
+// Divisão (a / b)
+function division (num1, num2) {
+    return num1 / num2;
+};
+console.log(division(50, 5));
+
+// Módulo (a % b)
+function remainder (num1, num2) {
+    return num1 % num2;
+};
+console.log(remainder(10, 3))
+
+
