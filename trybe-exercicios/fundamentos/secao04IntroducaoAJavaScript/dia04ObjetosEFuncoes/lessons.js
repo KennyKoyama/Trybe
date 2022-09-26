@@ -106,3 +106,16 @@ console.log(checkValue(-10));
 console.log(checkValue(0))
 
 
+// Faça um programa que receba três constantes com os valores dos três ângulos internos de um triângulo.
+// Retorne true se os ângulos representarem os ângulos de um triângulo e false, caso contrário.
+// Se algum ângulo for inválido, o programa deve retornar uma mensagem de erro.
+// Para os ângulos serem de um triângulo válido, a soma dos três devem ser 180 graus.
+// Um ângulo será considerado inválido se não tiver um valor positivo.
+function checkTriangle (angleA, angleB, angleC) {
+    if (angleA < 0 || angleB < 0 || angleC < 0) return "Angle value can't be a negative number.";
+    if (angleA + angleB + angleC === 180) return true;
+    return false;
+};
+console.log(checkTriangle(30, 70, 80));
+console.log(checkTriangle(20, 60, 70));
+console.log(checkTriangle(50, -30, 100));
