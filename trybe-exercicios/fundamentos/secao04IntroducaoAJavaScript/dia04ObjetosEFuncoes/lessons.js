@@ -69,7 +69,18 @@ console.log(division(50, 5));
 function remainder (num1, num2) {
     return num1 % num2;
 };
-console.log(remainder(10, 3))
+console.log(remainder(10, 3));
 
+
+// Faça um programa que retorne o maior de dois números. Defina, no começo do programa, duas constantes
+// com os valores que serão comparados.
+function biggest () {
+    const firstNumber = 10;
+    const secondNumber = 20;
+    if (firstNumber > secondNumber) return firstNumber;
+    if (secondNumber > firstNumber) return secondNumber;
+    return 'They are equal'
+};
+console.log(biggest());
 
 
