@@ -89,6 +89,20 @@ console.log(biggest());
 function biggestBetweenThree (num1, num2, num3) {
     if (num1 > num2 && num1 > num3) return `The biggest is ${num1}`;
     if (num2 > num1 && num2 > num3) return `The biggest is ${num2}`;
-    return `The biggest is ${num3}`
+    return `The biggest is ${num3}`;
 };
 console.log(biggestBetweenThree(10, 20, 30))
+
+
+// Faça um programa que, dado um valor recebido como parâmetro, retorne “positive” se esse valor for
+// positivo, “negative” se for negativo, e caso não seja nem positivo e nem negativo retorne “zero”.
+function checkValue (value) {
+    if (value > 0) return `The ${value} is positive.`;
+    if (value < 0) return `The ${value} is negative.`;
+    return 'The value is zero.';
+};
+console.log(checkValue(10));
+console.log(checkValue(-10));
+console.log(checkValue(0))
+
+
