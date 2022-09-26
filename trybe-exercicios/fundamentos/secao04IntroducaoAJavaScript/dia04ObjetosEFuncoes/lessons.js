@@ -77,10 +77,18 @@ console.log(remainder(10, 3));
 function biggest () {
     const firstNumber = 10;
     const secondNumber = 20;
-    if (firstNumber > secondNumber) return firstNumber;
-    if (secondNumber > firstNumber) return secondNumber;
+    if (firstNumber > secondNumber) return `The biggest is ${firstNumber}`;
+    if (secondNumber > firstNumber) return `The biggest is ${secondNumber}`;
     return 'They are equal'
 };
 console.log(biggest());
 
 
+// Faça um programa que retorne o maior de três números. Defina, no começo do programa, três constantes
+// com os valores que serão comparados.
+function biggestBetweenThree (num1, num2, num3) {
+    if (num1 > num2 && num1 > num3) return `The biggest is ${num1}`;
+    if (num2 > num1 && num2 > num3) return `The biggest is ${num2}`;
+    return `The biggest is ${num3}`
+};
+console.log(biggestBetweenThree(10, 20, 30))
