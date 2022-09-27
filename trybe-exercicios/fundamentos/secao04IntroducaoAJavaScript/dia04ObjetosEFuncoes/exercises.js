@@ -107,3 +107,13 @@ function indexOfBiggest (array) {
 console.log(indexOfBiggest([2, 3, 6, 7, 10, 1]));
 
 
+// Crie uma função que receba um array de inteiros e retorne o índice do menor valor.
+function indexOfSmallest (array) {
+    let smallest = Math.min(...array);
+    let index = array.indexOf(smallest);
+    console.log(index)
+    return index
+};
+console.log(indexOfSmallest([2, 4, 6, 7, 10, 0, -3]));
+
+
