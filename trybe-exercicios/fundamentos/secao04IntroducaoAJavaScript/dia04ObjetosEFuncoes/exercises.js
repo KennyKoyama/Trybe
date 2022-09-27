@@ -91,7 +91,7 @@ function verificaPalindrome(word) {
                        .join('');
 
     if (word === reversed) return true;
-    return false
+    return false;
 };
 console.log(verificaPalindrome('arara'));
 console.log(verificaPalindrome('desenvolvimento'));
@@ -123,9 +123,25 @@ function findBiggestName(arrayOfNames) {
     for (const name of arrayOfNames) {
         if (name.length > biggestName.length) biggestName = name;
     }
-    console.log(biggestName)
-    return biggestName
-}
+    console.log(biggestName);
+    return biggestName;
+};
 console.log(findBiggestName(['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana']));
+
+
+// Crie uma função que receba um array de inteiros e retorne o inteiro que mais se repete.
+function findMostRepeated(arrayOfNumbers) {
+    let mostRepeated = [0,0];
+    for (const number of arrayOfNumbers) {
+        let count = 0;
+        for (const numberToCheck of arrayOfNumbers) {
+            if (numberToCheck === number) count += 1;
+        }
+        if (count > mostRepeated[0]) mostRepeated = [count, number];
+    }
+    console.log(mostRepeated[1]);
+    return mostRepeated[1];
+};
+console.log(findMostRepeated([2, 3, 2, 5, 8, 2, 3]));
 
 
