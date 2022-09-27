@@ -145,3 +145,14 @@ function findMostRepeated(arrayOfNumbers) {
 console.log(findMostRepeated([2, 3, 2, 5, 8, 2, 3]));
 
 
+// Crie uma função que receba um número natural (número inteiro não negativo) N e retorne
+// o somatório de todos os números de 1 até N.
+function totalSum(num) {
+    let total = 0;
+    for (let number = 1; number <= num; number += 1) {
+        total += number;
+    }
+    console.log(total);
+    return total;
+};
+console.log(totalSum(5));
