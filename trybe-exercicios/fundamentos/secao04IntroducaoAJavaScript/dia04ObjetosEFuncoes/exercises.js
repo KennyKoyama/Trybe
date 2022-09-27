@@ -6,7 +6,7 @@ let info = {
 
 
 // Imprima no console uma mensagem de boas-vindas para a personagem acima, incluindo seu nome.
-// Use a sintaxe meuObjeto.chave. Valor esperado no console:
+// Use a sintaxe meuObjeto.chave.
 console.log('Bem vinda', info.personagem);
 
 
@@ -19,6 +19,12 @@ console.log(info);
 // Faça um for/in que mostre todas as chaves do objeto. Valor esperado no console:
 for (const key in info) {
     console.log(key);
+}
+
+
+// Faça um novo for/in, mas agora mostre todos os valores das chaves do objeto.
+for (const key in info) {
+    console.log(info[key]);
 }
 
 
