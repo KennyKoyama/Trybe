@@ -98,22 +98,34 @@ console.log(verificaPalindrome('desenvolvimento'));
 
 
 // Crie uma função que receba um array de inteiros e retorne o índice do maior valor.
-function indexOfBiggest (array) {
-    let biggest = Math.max(...array);
-    let index = array.indexOf(biggest);
-    console.log(index)
-    return index
+function indexOfBiggest (arrayOfNumbers) {
+    let biggest = Math.max(...arrayOfNumbers);
+    let index = arrayOfNumbers.indexOf(biggest);
+    console.log(index);
+    return index;
 };
 console.log(indexOfBiggest([2, 3, 6, 7, 10, 1]));
 
 
 // Crie uma função que receba um array de inteiros e retorne o índice do menor valor.
-function indexOfSmallest (array) {
-    let smallest = Math.min(...array);
-    let index = array.indexOf(smallest);
-    console.log(index)
-    return index
+function indexOfSmallest (arrayOfNumbers) {
+    let smallest = Math.min(...arrayOfNumbers);
+    let index = arrayOfNumbers.indexOf(smallest);
+    console.log(index);
+    return index;
 };
 console.log(indexOfSmallest([2, 4, 6, 7, 10, 0, -3]));
+
+
+// Crie uma função que receba um array de nomes e retorne o nome com a maior quantidade de caracteres.
+function findBiggestName(arrayOfNames) {
+    let biggestName = '';
+    for (const name of arrayOfNames) {
+        if (name.length > biggestName.length) biggestName = name;
+    }
+    console.log(biggestName)
+    return biggestName
+}
+console.log(findBiggestName(['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana']));
 
 
