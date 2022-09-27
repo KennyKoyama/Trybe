@@ -85,4 +85,52 @@ countFruits([
     'Banana', 'Pera', 'Abacate', 'Uva']);
 
 
-    
+// Usando o objeto abaixo, faça o que for pedido a seguir:
+let moradores = {
+    blocoUm: [
+      {
+        nome: 'Luiza',
+        sobrenome: 'Guimarães',
+        andar: 10,
+        apartamento: 1005,
+      },
+      {
+        nome: 'William',
+        sobrenome: 'Albuquerque',
+        andar: 5,
+        apartamento: 502,
+      },
+    ],
+    blocoDois: [
+      {
+        nome: 'Murilo',
+        sobrenome: 'Ferraz',
+        andar: 8,
+        apartamento: 804,
+      },
+      {
+        nome: 'Zoey',
+        sobrenome: 'Brooks',
+        andar: 1,
+        apartamento: 101,
+      },
+    ],
+  };
+
+// Acesse as chaves nome, sobrenome, andar e apartamento do último morador do blocoDois e faça umconsole.log
+// no seguinte formato: “O morador do bloco 2 de nome Zoey Brooks mora no 1° andar, apartamento 101”.
+let residentOrder = [];
+for (const resident of moradores.blocoDois) {
+    residentOrder.unshift(resident);
+};
+console.log(`O morador do bloco 2 de nome ${residentOrder[0]['nome']} ${residentOrder[0]['sobrenome']} mora no andar ${residentOrder[0]['andar']}, apartamento ${residentOrder[0]['apartamento']}`);
+
+// Utilize o for para imprimir o nome completo de todos os moradores do bloco 1, acessando suas chaves nome
+// e sobrenome. Depois faça o mesmo para os moradores do bloco 2.
+for (const resident of moradores.blocoUm) {
+    console.log(resident.nome + ' ' + resident.sobrenome)
+};
+
+for (const resident of moradores.blocoDois) {
+    console.log(resident.nome + ' ' + resident.sobrenome)
+};
