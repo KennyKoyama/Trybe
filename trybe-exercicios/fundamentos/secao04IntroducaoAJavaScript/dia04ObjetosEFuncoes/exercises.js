@@ -21,13 +21,13 @@ console.log(info);
 // Faça um for/in que mostre todas as chaves do objeto. Valor esperado no console:
 for (const key in info) {
     console.log(key);
-}
+};
 
 
 // Faça um novo for/in, mas agora mostre todos os valores das chaves do objeto.
 for (const key in info) {
     console.log(info[key]);
-}
+};
 
 
 // Agora, defina um segundo objeto com a mesma estrutura (as mesmas chaves) do primeiro e os seguintes valores:
@@ -63,7 +63,7 @@ let leitor = {
 
 // Acesse as chaves nome, sobrenome e titulo, que está dentro da chave livrosFavoritos, e faça um
 // console.log no seguinte formato: “O livro favorito de Julia Pessoa se chama ‘O Pior Dia de Todos’”.
-console.log(`O livro favorito de ${leitor.nome} ${leitor.sobrenome} se chama '${leitor.livrosFavoritos[0]['titulo']}'`)
+console.log(`O livro favorito de ${leitor.nome} ${leitor.sobrenome} se chama '${leitor.livrosFavoritos[0]['titulo']}'`);
 
 // Adicione um novo livro favorito na chave livrosFavoritos, que é um array. Atribua a essa chave um
 // objeto contendo as seguintes informações:
@@ -73,12 +73,12 @@ leitor.livrosFavoritos.push({
     editora: 'Rocco',
   });
 
-console.log(leitor.livrosFavoritos)
+console.log(leitor.livrosFavoritos);
 
 
 // Acesse as chaves nome e livrosFavoritos e faça um console.log no seguinte formato: “Julia tem
 // <quantidade> livros favoritos”, onde “<quantidade>” é um número gerado automaticamente pelo seu código.
-console.log(`${leitor.nome} tem ${leitor.livrosFavoritos.length} livros favoritos`)
+console.log(`${leitor.nome} tem ${leitor.livrosFavoritos.length} livros favoritos`);
 
 
 
@@ -92,7 +92,18 @@ function verificaPalindrome(word) {
 
     if (word === reversed) return true;
     return false
-}
-console.log(verificaPalindrome('arara'))
-console.log(verificaPalindrome('desenvolvimento'))
+};
+console.log(verificaPalindrome('arara'));
+console.log(verificaPalindrome('desenvolvimento'));
+
+
+// Crie uma função que receba um array de inteiros e retorne o índice do maior valor.
+function indexOfBiggest (array) {
+    let biggest = Math.max(...array);
+    let index = array.indexOf(biggest);
+    console.log(index)
+    return index
+};
+console.log(indexOfBiggest([2, 3, 6, 7, 10, 1]));
+
 
