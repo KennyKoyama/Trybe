@@ -1,3 +1,5 @@
+// OBJECT EXERCISES
+
 let info = {
     personagem: 'Margarida',
     origem: 'Pato Donald',
@@ -73,6 +75,24 @@ leitor.livrosFavoritos.push({
 
 console.log(leitor.livrosFavoritos)
 
+
 // Acesse as chaves nome e livrosFavoritos e faça um console.log no seguinte formato: “Julia tem
 // <quantidade> livros favoritos”, onde “<quantidade>” é um número gerado automaticamente pelo seu código.
 console.log(`${leitor.nome} tem ${leitor.livrosFavoritos.length} livros favoritos`)
+
+
+
+// FUNCTIONS EXERCISES
+// Crie uma função que receba uma string e retorne true se for um palíndromo, ou false, se não for.
+function verificaPalindrome(word) {
+    let reversed = word.toLowerCase()
+                       .split('')
+                       .reverse()
+                       .join('');
+
+    if (word === reversed) return true;
+    return false
+}
+console.log(verificaPalindrome('arara'))
+console.log(verificaPalindrome('desenvolvimento'))
+
