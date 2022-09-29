@@ -43,5 +43,14 @@
         // Agora acesse o terceiroFilho a partir de pai.
         const thirdChildFromFather = father.lastElementChild.previousElementSibling;
         console.log('Third Child of Father:', thirdChildFromFather);
+
+        // Crie um irmão para elementoOndeVoceEsta.
+        const siblingOfStart = document.createElement('section');
+        siblingOfStart.id = 'newSiblingOfStart';
+        father.appendChild(siblingOfStart);
+
+        // Crie um filho para elementoOndeVoceEsta.
+        // Crie um filho para primeiroFilhoDoFilho.
+        // A partir desse filho criado, acesse terceiroFilho.
     </script>
   </main>
