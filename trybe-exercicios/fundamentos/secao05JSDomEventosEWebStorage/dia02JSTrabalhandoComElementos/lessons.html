@@ -11,8 +11,9 @@
     </section>
     <script>
         const start = document.getElementById('elementoOndeVoceEsta');
-        console.log(start);
-        
-
+        console.log('Start:', start);
+        let father = start.parentNode;
+        console.log('Father: ', father);
+        father.style = 'background-color: darkgreen;';
     </script>
   </main>
