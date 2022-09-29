@@ -60,7 +60,16 @@
         firstChildOfChild.appendChild(childOfFirstChildOfStart);
 
         // A partir desse filho criado, acesse terceiroFilho.
-        childOfFirstChildOfStart.parentElement.parentElement.nextElementSibling
-        
+        childOfFirstChildOfStart.parentElement.parentElement.nextElementSibling;
+
+        // Remova todos os elementos filhos de paiDoPai exceto pai,
+        // elementoOndeVoceEsta e primeiroFilhoDoFilho.
+        const childList = document.querySelectorAll('section');
+        for (const element of childList) {
+            if (element.id != 'pai' && element.id != 'elementoOndeVoceEsta' && element.id != 'primeiroFilhoDoFilho') {
+                element.remove();
+            };
+        }
+
     </script>
   </main>
