@@ -12,8 +12,12 @@
     <script>
         const start = document.getElementById('elementoOndeVoceEsta');
         console.log('Start:', start);
-        let father = start.parentNode;
+        const father = start.parentNode;
         console.log('Father: ', father);
         father.style = 'background-color: darkgreen;';
+        const firstChildOfChild = start.firstElementChild;
+        firstChildOfChild.innerText = 'First Child of Child';
+        console.log('First Child of Child:', firstChildOfChild)
+        
     </script>
   </main>
