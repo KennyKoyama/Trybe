@@ -50,7 +50,15 @@
         father.appendChild(siblingOfStart);
 
         // Crie um filho para elementoOndeVoceEsta.
+        const childOfStart = document.createElement('section');
+        childOfStart.id = 'newChildOfStart';
+        start.appendChild(childOfStart);
+
         // Crie um filho para primeiroFilhoDoFilho.
+        const childOfFirstChildOfStart = document.createElement('section');
+        childOfFirstChildOfStart.id = 'newChildOfFirstChildOfStart';
+        firstChildOfChild.appendChild(childOfFirstChildOfStart);
+
         // A partir desse filho criado, acesse terceiroFilho.
     </script>
   </main>
