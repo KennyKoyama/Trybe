@@ -65,6 +65,10 @@
         document.getElementsByTagName('p')[0].innerText = toUpper;
 
     //  6. Crie e execute uma função que exiba o conteúdo de todas as tags <p> no console.
+        let pAmount = document.getElementsByTagName('p').length;
+        for (let index = 0; index < pAmount; index += 1) {
+            console.log(document.getElementsByTagName('p')[index])
+        }
     </script>
   </body>
 </html>
