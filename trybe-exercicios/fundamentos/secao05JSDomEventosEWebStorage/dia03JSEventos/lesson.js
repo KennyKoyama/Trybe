@@ -8,7 +8,7 @@ const liElements = document.querySelectorAll('li');
 
 // - Copie esse arquivo e edite apenas ele;
 //  - Note que uma das caixas está um pouco acima das outras. Por que isso ocorre?
-//      Porque no CSS tem um seletor com a propriedade transform translateY movendo o
+//      Porque no CSS tem um seletor para a classe tech com a propriedade transform translateY movendo o
 //      elemento -20px no eixo Y da posição atual.
 
 // - Crie uma função que adicione a classe 'tech' ao elemento `li` quando for clicado.
