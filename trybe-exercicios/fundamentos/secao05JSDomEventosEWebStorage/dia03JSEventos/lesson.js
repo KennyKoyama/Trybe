@@ -3,7 +3,7 @@ const secondLi = document.getElementById('second-li');
 const thirdLi = document.getElementById('third-li');
 const input = document.getElementById('input');
 const myWebpage = document.getElementById('my-spotrybefy');
-const classTech = document.querySelector('.tech');
+
 const liElements = document.querySelectorAll('li');
 
 // - Copie esse arquivo e edite apenas ele;
@@ -26,7 +26,10 @@ function switchClass (element) {
 
 // - Crie uma função que, ao digitar na caixa de texto, altere o texto do elemento
 // com a classe 'tech';
-
+input.addEventListener("keyup", () => {
+    let classTech = document.querySelector('.tech');
+    classTech.innerHTML = input.value;
+})
 
 // - Crie uma função que, ao clicar duas vezes em 'Meu top 3 do Spotrybefy', ele
 // redirecione para alguma página;
