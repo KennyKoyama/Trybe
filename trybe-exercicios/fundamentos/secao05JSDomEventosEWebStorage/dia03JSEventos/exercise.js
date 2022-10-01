@@ -22,11 +22,10 @@ function createDaysOfTheWeek() {
 // Note que os dias 29 e 30 de novembro estão no array, pois representam respectivamente
 // Domingo e Segunda-feira.
 // A tag <ul> deve conter o id 'days'
-
+const monthDaysList = document.querySelector('#days');
 function createDaysOfMonth() {
     const decemberDaysList = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16,
                             17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
-    const monthDaysList = document.querySelector('#days');
     for (const day of decemberDaysList) {
         let item = document.createElement('li');
         // Os dias devem estar contidos em uma tag <li>, e todos devem ter a classe day.
@@ -129,4 +128,20 @@ function textFriday() {
 // dias que são sextas-feiras.
 const fridayButton = document.querySelector('#btn-friday');
 fridayButton.addEventListener('click', textFriday);
+
+
+// Parte 6
+// Implemente duas funções que criem um efeito de “zoom”.
+// Ao passar o ponteiro do mouse em um dia do mês no calendário, o texto desse dia deve
+// aumentar e, quando o ponteiro do mouse sair do dia, o texto deve retornar ao tamanho original.
+// Dica - Propriedade: event.target.
+monthDaysList.addEventListener('mouseover', zoomIn)
+monthDaysList.addEventListener('mouseout', zoomOut)
+function zoomIn(element) {
+    if (element.target.localName == 'li') element.target.style.fontSize = '2rem';
+};
+function zoomOut(element) {
+    if (element.target.localName == 'li') element.target.style.fontSize = '';
+}
+
 
