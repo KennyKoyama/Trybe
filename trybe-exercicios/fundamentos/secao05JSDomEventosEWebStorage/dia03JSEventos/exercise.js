@@ -49,10 +49,9 @@ createDaysOfMonth();
 
 // Parte 2
 // Implemente uma função que crie dinamicamente um botão com o nome “Feriados”.
-
+const buttonsContainer = document.querySelector('.buttons-container');
 function buttonHoliday() {
     const buttonHoliday = document.createElement('button');
-    const buttonsContainer = document.querySelector('.buttons-container');
     // Adicione a este botão a ID "btn-holiday"
     buttonHoliday.id = 'btn-holiday';
 
@@ -70,7 +69,6 @@ buttonHoliday();
 function colorHoliday() {
     const holidayList = document.querySelectorAll('.holiday');
     for (const holiday of holidayList) {
-        console.log(holiday);
         if (holiday.style.backgroundColor != 'lightblue') {
             holiday.style.backgroundColor = 'lightblue';
             continue
@@ -87,3 +85,18 @@ const holidayButton = document.querySelector('#btn-holiday');
 holidayButton.addEventListener('click', colorHoliday);
 
 
+// Parte 4
+// Implemente uma função que crie dinamicamente um botão com o nome "Sexta-feira".
+
+function buttonFriday() {
+    const buttonFriday = document.createElement('button');
+    // Adicione a esse botão o ID "btn-friday";
+    buttonFriday.id = 'btn-friday';
+
+    // Sua função deve receber como parâmetro a string “Sexta-feira”;
+    buttonFriday.innerHTML = 'Sexta-feira';
+
+    // Adicione este botão como filho/filha da tag <div> com classe "buttons-container"
+    buttonsContainer.appendChild(buttonFriday);
+};
+buttonFriday();
