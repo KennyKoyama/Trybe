@@ -9,7 +9,7 @@ function createDaysOfTheWeek() {
   
       weekDaysList.appendChild(dayListItem);
     };
-}
+};
   
   createDaysOfTheWeek();
   
@@ -42,8 +42,8 @@ function createDaysOfMonth() {
         // friday. Ex: <li class="day friday">4</li>
         if(day == 4 || day == 11 || day == 18 || day == 25) item.className += ' friday';
         monthDaysList.appendChild(item);
-    }
-}
+    };
+};
 createDaysOfMonth();
 
 
@@ -61,5 +61,29 @@ function buttonHoliday() {
 
     // Adicione este botão como filho/filha da tag <div> com classe "buttons-container"
     buttonsContainer.appendChild(buttonHoliday);
-}
-buttonHoliday()
+};
+buttonHoliday();
+
+
+// Parte 3
+// Implemente uma função que muda a cor de fundo dos dias que possuem a classe "holiday".
+function colorHoliday() {
+    const holidayList = document.querySelectorAll('.holiday');
+    for (const holiday of holidayList) {
+        console.log(holiday);
+        if (holiday.style.backgroundColor != 'lightblue') {
+            holiday.style.backgroundColor = 'lightblue';
+            continue
+        };
+
+        // 👀 É interessante que esse botão possua também a lógica inversa. Ao ser clicado novamente,
+        // ele retorna à configuração inicial com a cor “rgb(238,238,238)”.
+        holiday.style.backgroundColor = 'rgb(238,238,238)';
+    };
+};
+// Adicione ao botão "Feriados" um evento de "click" que altere a cor de fundo dos dias
+// que possuem a classe "holiday"
+const holidayButton = document.querySelector('#btn-holiday');
+holidayButton.addEventListener('click', colorHoliday);
+
+
