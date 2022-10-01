@@ -137,13 +137,17 @@ fridayButton.addEventListener('click', textFriday);
 // Dica - Propriedade: event.target.
 monthDaysList.addEventListener('mouseover', zoomIn)
 monthDaysList.addEventListener('mouseout', zoomOut)
+monthDaysList.addEventListener('mouseover', changeCursor)
 function zoomIn(element) {
     if (element.target.localName == 'li') element.target.style.fontSize = '2rem';
 };
 function zoomOut(element) {
     if (element.target.localName == 'li') element.target.style.fontSize = '';
 };
-
+function changeCursor(element) {
+    if (element.target.localName == 'li') element.target.style.cursor = 'pointer';
+    console.log(element.target.style)
+};
 
 // Parte 7
 // Implemente uma função que adicione uma tarefa personalizada ao calendário.
@@ -222,6 +226,7 @@ monthDaysList.addEventListener('click', function (selectedDay) {
 // Ao pressionar a tecla “enter” o evento também deverá ser disparado.
 // Dica - Propriedade: key.
 let inputTask = document.querySelector('#task-input');
+inputTask.style.caretColor = 'green';
 let inputTaskValue = () => inputTask.value;
 const inputTaskButton = document.querySelector('#btn-add');
 const taskList = document.querySelector('.task-list');
@@ -235,3 +240,6 @@ function addTask(event) {
 };
 inputTaskButton.addEventListener('click', addTask);
 inputTask.addEventListener('keypress', addTask);
+
+
+// Just 4 fun
