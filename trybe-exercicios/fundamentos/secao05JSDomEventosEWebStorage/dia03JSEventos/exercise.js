@@ -166,12 +166,29 @@ addMyTask('Projeto: ');
 // Essa função deverá receber como parâmetro uma string (‘cor’) e criar dinamicamente
 // um elemento de tag <div> com a classe task
 // O parâmetro cor deverá ser utilizado como cor de fundo da <div> criada
-// O elemento criado deverá ser adicionado como filho/filha da tag <div> que possui
-// a classe "my-tasks"
 function myTaskColor(color) {
     const newColor = document.createElement('div');
     newColor.className = 'task';
     newColor.style.backgroundColor = color;
+
+    // O elemento criado deverá ser adicionado como filho/filha da tag <div> que possui
+    // a classe "my-tasks"
     myTasks.appendChild(newColor);
 };
 myTaskColor('green');
+
+
+// Parte 9
+// Implemente uma função que selecione uma tarefa.
+// Adicione um evento que ao clicar no elemento com a tag <div> referente à cor da sua tarefa,
+// atribua a esse elemento a classe task selected, ou seja, quando sua tarefa possuir a classe
+// task selected ela estará selecionada
+// Ao clicar novamente no elemento, a sua classe deverá voltar a ser somente task, ou seja,
+// essa tarefa está deixando de ser uma tarefa selecionada.
+let selectedColor;
+myTasks.addEventListener('click' ,function (selected) {
+    selectedColor = selected.target.style.backgroundColor;
+    selected.target.classList.toggle('selected')
+    console.log(selected.target.classList)
+    console.log(selectedColor)
+});
