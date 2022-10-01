@@ -186,9 +186,29 @@ myTaskColor('green');
 // Ao clicar novamente no elemento, a sua classe deverá voltar a ser somente task, ou seja,
 // essa tarefa está deixando de ser uma tarefa selecionada.
 let selectedColor;
-myTasks.addEventListener('click' ,function (selected) {
-    selectedColor = selected.target.style.backgroundColor;
-    selected.target.classList.toggle('selected')
-    console.log(selected.target.classList)
-    console.log(selectedColor)
+myTasks.addEventListener('click' ,function (selectedTask) {
+    if (selectedTask.target.classList.contains('task')){
+        selectedColor = selectedTask.target.style.backgroundColor;
+        selectedTask.target.classList.toggle('selected');
+    };
 });
+
+
+// Parte 10
+// Implemente uma função que atribua a cor da tarefa ao dia do calendário.
+// Adicione um evento que, ao clicar em um dia do mês no calendário, atribua a esse dia a
+// cor da legenda da sua tarefa selecionada.
+// Ao clicar novamente no dia com a cor da legenda, a sua cor deverá voltar à configuração
+// inicial rgb(119,119,119)
+monthDaysList.addEventListener('click', function (selectedDay) {
+    if (selectedDay.target.classList.contains('day')) {
+        if (!selectedDay.target.classList.contains('tint')){
+            selectedDay.target.classList.toggle('tint');
+            selectedDay.target.style.color = selectedColor;
+        } else {
+            selectedDay.target.style.color = '';
+            selectedDay.target.classList.toggle('tint');
+        };
+    };
+});
+
