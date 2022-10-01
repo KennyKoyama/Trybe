@@ -142,20 +142,36 @@ function zoomIn(element) {
 };
 function zoomOut(element) {
     if (element.target.localName == 'li') element.target.style.fontSize = '';
-}
+};
 
 
 // Parte 7
 // Implemente uma função que adicione uma tarefa personalizada ao calendário.
 // A função deve receber como parâmetro a string com o nome da tarefa (ex: “cozinhar”) e
 // criar dinamicamente um elemento com a tag <span> contendo a tarefa.
-// O elemento criado deverá ser adicionado como filho/filha da tag <div> que possui
-// a classe "my-tasks".
 const myTasks = document.querySelector('.my-tasks');
 function addMyTask(task) {
     const project = document.createElement('span');
     project.innerHTML = task;
+
+    // O elemento criado deverá ser adicionado como filho/filha da tag <div> que possui
+    // a classe "my-tasks".
     myTasks.appendChild(project);
-}
+};
 addMyTask('Projeto: ');
 
+
+// Parte 8
+// Implemente uma função que adicione uma legenda com cor para a tarefa.
+// Essa função deverá receber como parâmetro uma string (‘cor’) e criar dinamicamente
+// um elemento de tag <div> com a classe task
+// O parâmetro cor deverá ser utilizado como cor de fundo da <div> criada
+// O elemento criado deverá ser adicionado como filho/filha da tag <div> que possui
+// a classe "my-tasks"
+function myTaskColor(color) {
+    const newColor = document.createElement('div');
+    newColor.className = 'task';
+    newColor.style.backgroundColor = color;
+    myTasks.appendChild(newColor);
+};
+myTaskColor('green');
