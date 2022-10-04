@@ -1,0 +1,66 @@
+body {
+    width: 90%;
+    margin: auto;
+    box-sizing: border-box;
+}
+
+header {
+    /* border: 3px solid purple; */
+    box-shadow: 0 0 5px 3px rgb(72, 72, 72);
+    border-radius: 5px;
+    text-align: center;
+    padding: 0.1em;
+    margin-top: 0.5rem;
+}
+
+main {
+    /* border: 3px solid green; */
+    box-shadow: 0 0 5px 3px rgb(72, 72, 72);
+    border-radius: 5px;
+    padding: 2rem;
+    margin-top: 1rem;
+}
+
+
+.custom {
+    box-shadow: 0 0 5px 3px rgb(72, 72, 72);
+    border-radius: 5px;
+    margin-top: 2rem;
+    /* border: 3px solid; */
+    padding: 1rem;
+}
+
+.button {
+    font-size: 1rem;
+    padding: 0.3em;
+    margin-left: 0.5em;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    font-size: 1.2em;
+    margin-bottom: 1.2em;
+    
+}
+
+#fontFamilyArial {
+    font-family: Arial, sans-serif;
+}
+
+#fontFamilyVerdana {
+    font-family: Verdana, sans-serif;
+}
+
+#fontFamilyImpact {
+    font-family: Impact, sans-serif;
+}
+
+#fontFamilyGeorgia {
+    font-family: Georgia, sans-serif;
+}
+
+#fontFamilyCursive {
+    font-family: cursive, sans-serif;
+}

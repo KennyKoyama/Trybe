@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Read page</title>
+    <link rel="stylesheet" href="exercise.css">
+</head>
+<body>
+    <header>
+        <h1>Lorem Ipsum</h1>
+    </header>
+    <main>
+        <h3>What is Lorem Ipsum</h3>
+        <p><bold>Lorem Ipsum</bold> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+    </main>
+    <section class="custom">
+        <h2>Preferencias:</h2>
+        <ul>
+            <li>
+                <label for="bgColor">Cor de fundo da tela:  </label>
+                <input type="color" id="bgColor" class="bgColor" name="bgColor">
+                <input type="button" value="Apply" id="bgColorBtn" class="button">
+            </li>
+            <li>
+                <label for="fontColor">Cor do texto:  </label>
+                <input type="color" id="fontColor" class="fontColor" name="fontColor">
+                <input type="button" value="Apply" id="fontColorBtn"  class="button">
+            </li>
+            <li>
+                <label for="fontSize">Tamanho da fonte:  </label>
+                <input type="range" id="fontSize" name="fontSize" min="1" max="50">
+                <input type="button" value="Apply" id="fontSizeBtn"  class="button">
+            </li>
+            <li>
+                <label for="textLineGap">Espaçamento entre as linhas do texto:  </label>
+                <input type="range" id="textLineGap" name="textLineGap" min="0" max="30">
+                <input type="button" value="Apply" id="textLineGap-btn"  class="button">
+            </li>
+            <li>
+                <label for="vol">Tipo da fonte:  </label>
+                <input type="button" value="Arial" id="fontFamilyArial"  class="button">
+                <input type="button" value="Verdana" id="fontFamilyVerdana"  class="button">
+                <input type="button" value="Impact" id="fontFamilyImpact"  class="button">
+                <input type="button" value="Georgia" id="fontFamilyGeorgia"  class="button">
+                <input type="button" value="Cursive" id="fontFamilyCursive"  class="button">
+            </li>
+        </ul>
+    </section>
+    <script src="exercise.js"></script>
+</body>
+</html>
