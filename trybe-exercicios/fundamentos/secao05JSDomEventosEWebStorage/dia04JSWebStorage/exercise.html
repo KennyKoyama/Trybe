@@ -11,43 +11,35 @@
     <header>
         <h1>Lorem Ipsum</h1>
     </header>
-    <main>
-        <h3>What is Lorem Ipsum</h3>
-        <p><bold>Lorem Ipsum</bold> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-    </main>
     <section class="custom">
         <h2>Preferencias:</h2>
-        <ul>
-            <li>
+            <div>
                 <label for="bgColor">Cor de fundo da tela:  </label>
                 <input type="color" id="bgColorPicker" class="colorPicker" name="bgColor" value="white">
-                <!-- <input type="button" value="Apply" id="bgColorBtn" class="button"> -->
-            </li>
-            <li>
-                <label for="fontColor">Cor do texto:  </label>
-                <input type="color" id="fontColorPicker" class="colorPicker" name="fontColor">
-                <!-- <input type="button" value="Apply" id="fontColorBtn"  class="button"> -->
-            </li>
-            <li>
+                <label for="fontColor" class="fontColorPicker">Cor do texto:  </label>
+                <input type="color" id="fontColorPicker" class="ColorPicker" name="fontColor">
+            </div>
+            <div>
                 <label for="fontSize">Tamanho da fonte:  </label>
-                <input type="range" id="fontSizeSlider" name="fontSize" min="1" max="50">
-                <!-- <input type="button" value="Apply" id="fontSizeBtn"  class="button"> -->
-            </li>
-            <li>
+                <input type="range" id="fontSizeSlider" name="fontSize" min="10" max="50">
+            </div>
+            <div>
                 <label for="textLineGap">Espaçamento entre as linhas do texto:  </label>
                 <input type="range" id="textLineGapSlider" name="textLineGap" min="1" max="5">
-                <!-- <input type="button" value="Apply" id="textLineGapBtn"  class="button"> -->
-            </li>
-            <li>
+            </div>
+            <div id="fontFamilyContainer">
                 <label for="vol">Tipo da fonte:  </label>
                 <input type="button" value="Arial" id="fontFamilyArialBtn"  class="button">
                 <input type="button" value="Verdana" id="fontFamilyVerdanaBtn"  class="button">
                 <input type="button" value="Impact" id="fontFamilyImpactBtn"  class="button">
                 <input type="button" value="Georgia" id="fontFamilyGeorgiaBtn"  class="button">
                 <input type="button" value="Cursive" id="fontFamilyCursiveBtn"  class="button">
-            </li>
-        </ul>
+            </div>
     </section>
+    <main>
+        <h3>What is Lorem Ipsum</h3>
+        <p><em>Lorem Ipsum</em> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+    </main>
     <script src="exercise.js"></script>
 </body>
 </html>
