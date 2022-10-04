@@ -9,12 +9,16 @@ const fontFamilyVerdanaBtn = document.querySelector('#fontFamilyVerdanaBtn');
 const fontFamilyImpactBtn = document.querySelector('#fontFamilyImpactBtn');
 const fontFamilyGeorgiaBtn = document.querySelector('#fontFamilyGeorgiaBtn');
 const fontFamilyCursiveBtn = document.querySelector('#fontFamilyCursiveBtn');
+let fontSizeSpan = document.querySelector('#fontSizeSpan');
+let lineHeightSpan = document.querySelector('#lineHeightSpan');
 
 mainStyle.backgroundColor = localStorage.getItem('bgColor');
 mainStyle.color = localStorage.getItem('fontColor');
 mainStyle.fontSize = localStorage.getItem('fontSize');
 mainStyle.lineHeight = localStorage.getItem('lineGap');
 mainStyle.fontFamily = localStorage.getItem('fontFamily');
+fontSizeSpan.innerHTML = localStorage.getItem('fontSize');
+lineHeightSpan.innerHTML = localStorage.getItem('lineGap');
 
 
 bgColorPicker.addEventListener('input', () => {
@@ -28,10 +32,12 @@ fontColorPicker.addEventListener('input', () => {
 fontSizeSlider.addEventListener('input', () => {
     mainStyle.fontSize = fontSizeSlider.value + 'px';
     localStorage.setItem('fontSize', fontSizeSlider.value + 'px');
+    fontSizeSpan.innerHTML = fontSizeSlider.value + 'px';
 });
 textLineGapSlider.addEventListener('input', () => {
     mainStyle.lineHeight = textLineGapSlider.value;
     localStorage.setItem('lineGap', textLineGapSlider.value);
+    lineHeightSpan.innerHTML = textLineGapSlider.value;
 });
 fontFamilyArialBtn.addEventListener('click', () => {
     mainStyle.fontFamily = 'Arial, sans-serif';
