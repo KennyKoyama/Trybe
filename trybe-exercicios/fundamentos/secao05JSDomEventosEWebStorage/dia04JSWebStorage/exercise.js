@@ -14,10 +14,18 @@ const fontFamilyImpactBtn = document.querySelector('#fontFamilyImpactBtn');
 const fontFamilyGeorgiaBtn = document.querySelector('#fontFamilyGeorgiaBtn');
 const fontFamilyCursiveBtn = document.querySelector('#fontFamilyCursiveBtn');
 
-bgColorBtn.addEventListener('click', () => mainStyle.backgroundColor = bgColorPicker.value);
-fontColorBtn.addEventListener('click', () => mainStyle.color = fontColorPicker.value);
-fontSizeBtn.addEventListener('click', () => mainStyle.fontSize = fontSizeSlider.value + 'px');
-textLineGapBtn.addEventListener('click', () => mainStyle.lineHeight = textLineGapSlider.value);
+// bgColorBtn.addEventListener('click', () => mainStyle.backgroundColor = bgColorPicker.value);
+bgColorPicker.addEventListener('input', () => mainStyle.backgroundColor = bgColorPicker.value);
+
+// fontColorBtn.addEventListener('click', () => mainStyle.color = fontColorPicker.value);
+fontColorPicker.addEventListener('input', () => mainStyle.color = fontColorPicker.value);
+
+// fontSizeBtn.addEventListener('click', () => mainStyle.fontSize = fontSizeSlider.value + 'px');
+fontSizeSlider.addEventListener('input', () => mainStyle.fontSize = fontSizeSlider.value + 'px');
+
+// textLineGapBtn.addEventListener('click', () => mainStyle.lineHeight = textLineGapSlider.value);
+textLineGapSlider.addEventListener('input', () => mainStyle.lineHeight = textLineGapSlider.value);
+
 fontFamilyArialBtn.addEventListener('click', () => mainStyle.fontFamily = 'Arial, sans-serif');
 fontFamilyVerdanaBtn.addEventListener('click', () => mainStyle.fontFamily = 'Verdana, sans-serif');
 fontFamilyImpactBtn.addEventListener('click', () => mainStyle.fontFamily = 'Impact, sans-serif');
