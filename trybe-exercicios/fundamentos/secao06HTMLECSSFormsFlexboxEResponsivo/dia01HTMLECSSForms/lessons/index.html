@@ -17,8 +17,10 @@
         <section id="emailContainer">
           <!-- Adicione os placeholder Digite seu email e Digite sua senha para os campos de email e senha. -->
           <!-- Adicione o atributo required para os campos de email e senha. -->
+          <!-- Adicione o atributo autocomplete="off" para o campo de email. -->
+          <!-- Adicione o atributo autofocus para o campo de email. -->
           <label for="inputEmail">Email:</label>
-          <input type="email" name="email" id="inputEmail" placeholder="Digite seu email" required>
+          <input type="email" name="email" id="inputEmail" placeholder="Digite seu email" required autocomplete="off" autofocus>
           <label for="inputPassword">Password:</label>
           <input type="password" name="password" id="inputPassword" placeholder="Digite sua senha" required>
         </section>
@@ -33,9 +35,6 @@
         <section id="enterButtonContainer">
           <input type="button" value="Entrar">
         </section>
-
-        <!-- Adicione o atributo autocomplete="off" para o campo de email. -->
-        <!-- Adicione o atributo autofocus para o campo de email. -->
       </form>
     </main>
     <footer>
