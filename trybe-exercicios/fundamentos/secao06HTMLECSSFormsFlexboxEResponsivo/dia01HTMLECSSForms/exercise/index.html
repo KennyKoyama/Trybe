@@ -9,25 +9,37 @@
   </head>
   <body>
     <header>
-      <h1>HTML e CSS: Forms Exercise</h1>
+      <h1>TrybeTrip</h1>
     </header>
     <main>
       <form action="" method="get">
         <!-- O formulário deverá permitir que a pessoa usuária insira os seguintes campos: -->
         <fieldset>
           <!-- Nome Completo: -->
+          <h2>Nome e Email</h2>
           <!-- Limitado entre 10 e 40 caracteres. -->
-          <label for="nameInput">Name:</label>
-          <input type="text" name="name" id="nameInput" minlength="10" maxlength="40">
+          <label for="name-input">Full Name:</label>
+          <input type="text" name="name" id="name-input" minlength="10" maxlength="40">
           <!-- E-mail: -->
           <!-- Limitado entre 10 e 50 caracteres. -->
-          <label for="emailInput">Email:</label>
-          <input type="email" name="email" id="emailInput" minlength="10" maxlength="50">
+          <label for="email-input">Email:</label>
+          <input type="email" name="email" id="email-input" minlength="10" maxlength="50">
         </fieldset>
-          
+
+        <fieldset>
         <!-- Destino Preferido: -->
-          
+          <h2>Destino Preferido</h2>
         <!-- 4 opções: Cidade, Campo, Praia, Montanhas. -->
+          <input type="radio" name="favorite-destiny" id="city-selector" value="city">
+          <label for="city-selector">Cidade</label>
+          <input type="radio" name="favorite-destiny" id="country-selector" value="country">
+          <label for="country-selector">Campo</label>
+          <input type="radio" name="favorite-destiny" id="beach-selector" value="beach">
+          <label for="beach-selector">Praia</label>
+          <input type="radio" name="favorite-destiny" id="montains-selector" value="mountains">
+          <label for="mountains-selector">Montanhas</label>
+        </fieldset>
+        
         <!-- Por que você deveria ser a pessoa desenvolvedora a ganhar o concurso TrybeTrip? -->
           
         <!-- Limite de 500 caracteres. -->
