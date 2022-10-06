@@ -14,7 +14,7 @@
     <main>
       <form action="" method="get">
         <!-- O formulário deverá permitir que a pessoa usuária insira os seguintes campos: -->
-        <fieldset>
+        <fieldset id="name-email-container">
           <!-- Nome Completo: -->
           <h2>Nome e Email</h2>
           <!-- Limitado entre 10 e 40 caracteres. -->
@@ -26,10 +26,10 @@
           <input type="email" name="email" id="email-input" minlength="10" maxlength="50" placeholder="Digite seu email">
         </fieldset>
 
-        <fieldset>
-        <!-- Destino Preferido: -->
+        <fieldset id="favorite-destiny-container">
+          <!-- Destino Preferido: -->
           <h2>Destino Preferido</h2>
-        <!-- 4 opções: Cidade, Campo, Praia, Montanhas. -->
+          <!-- 4 opções: Cidade, Campo, Praia, Montanhas. -->
           <input type="radio" name="favorite-destiny" id="city-selector" value="city">
           <label for="city-selector">Cidade</label>
           <input type="radio" name="favorite-destiny" id="country-selector" value="country">
@@ -40,15 +40,16 @@
           <label for="mountains-selector">Montanhas</label>
         </fieldset>
 
-        <fieldset>
-        <!-- Por que você deveria ser a pessoa desenvolvedora a ganhar o concurso TrybeTrip? -->
+        <fieldset id="answer-container">
+          <!-- Por que você deveria ser a pessoa desenvolvedora a ganhar o concurso TrybeTrip? -->
           <h2>Por que você deveria ser a pessoa desenvolvedora a ganhar o concurso TrybeTrip?</h2>
-        <!-- Limite de 500 caracteres. -->
+          <!-- Limite de 500 caracteres. -->
           <textarea name="answer" id="answer" cols="45" rows="10" maxlength="500" placeholder="Digite sua resposta"></textarea>
         </fieldset>
 
-        <!-- Qual a melhor data para realizar sua viagem? -->
-          
+        <fieldset id="trip-date-container">
+          <!-- Qual a melhor data para realizar sua viagem? -->
+        </fieldset>
         <!-- Gostaria de receber outras incríveis oportunidades oferecidas pela Trybe? -->
           
         <!-- Concordo que imagens das minhas férias poderão ser usadas na divulgação de concursos futuros. -->
