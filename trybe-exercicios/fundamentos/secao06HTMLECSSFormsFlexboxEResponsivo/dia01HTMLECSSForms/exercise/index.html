@@ -14,7 +14,7 @@
     <main>
       <form action="" method="get">
         <!-- O formulário deverá permitir que a pessoa usuária insira os seguintes campos: -->
-        <fieldset id="name-email-container">
+        <fieldset id="name-email-fieldset">
           <!-- Nome Completo: -->
           <h2>Nome e Email</h2>
           <!-- Limitado entre 10 e 40 caracteres. -->
@@ -26,7 +26,7 @@
           <input type="email" name="email" id="email-input" minlength="10" maxlength="50" placeholder="Digite seu email">
         </fieldset>
 
-        <fieldset id="favorite-destiny-container">
+        <fieldset id="favorite-destiny-fieldset">
           <!-- Destino Preferido: -->
           <h2>Destino Preferido</h2>
           <!-- 4 opções: Cidade, Campo, Praia, Montanhas. -->
@@ -40,23 +40,29 @@
           <label for="mountains-selector">Montanhas</label>
         </fieldset>
 
-        <fieldset id="answer-container">
+        <fieldset id="answer-fieldset">
           <!-- Por que você deveria ser a pessoa desenvolvedora a ganhar o concurso TrybeTrip? -->
           <h2>Por que você deveria ser a pessoa desenvolvedora a ganhar o concurso TrybeTrip?</h2>
           <!-- Limite de 500 caracteres. -->
           <textarea name="answer" id="answer" cols="45" rows="10" maxlength="500" placeholder="Digite sua resposta"></textarea>
         </fieldset>
 
-        <fieldset id="trip-date-container">
+        <fieldset id="trip-date-fieldset">
           <!-- Qual a melhor data para realizar sua viagem? -->
           <h2>Qual a melhor data para realizar sua viagem?</h2>
           <label for="trip-date">Data:</label>
           <input type="date" name="trip-date" id="date-input">
         </fieldset>
-        <!-- Gostaria de receber outras incríveis oportunidades oferecidas pela Trybe? -->
-          
-        <!-- Concordo que imagens das minhas férias poderão ser usadas na divulgação de concursos futuros. -->
-          
+
+        <fieldset id="agreements-fieldset">
+          <!-- Gostaria de receber outras incríveis oportunidades oferecidas pela Trybe? -->
+          <label for="newsletter-checkbox">Gostaria de receber outras incríveis oportunidades oferecidas pela Trybe?</label>
+          <input type="checkbox" name="newsletter" id="newsletter-checkbox">
+          <!-- Concordo que imagens das minhas férias poderão ser usadas na divulgação de concursos futuros. -->
+          <label for="image-rights-checkbox">Concordo que imagens das minhas férias poderão ser usadas na divulgação de concursos futuros.</label>
+          <input type="checkbox" name="image-rights" id="image-rights-checkbox">
+        </fieldset>
+        
         <!-- Esses serão os principais campos utilizados nos próximos exercícios. -->
           
         <!-- Crie um botão para enviar as informações preenchidas. -->
