@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "bootstrap": "^5.2.2"
+    "bootstrap": "^5.2.2",
+    "pikaday": "^1.8.2"
   }
 }
