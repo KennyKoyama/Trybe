@@ -32,7 +32,7 @@ function isValid() {
   const name = document.querySelector('#name-input').value.length > 10;
   const email = document.querySelector('#email-input').value.length > 10;
   const text = document.querySelector('#answer').value.length > 50;
-  const date = document.querySelector('#date-input').value.length > 0;
+  const date = document.querySelector('.date-input').value.length > 0;
   const destiny = document.querySelectorAll('input[name="preferred-destiny"]');
   let radio = false;
   for (const option of destiny) {
