@@ -15,15 +15,19 @@
       <form action="" method="get">
         <!-- O formulário deverá permitir que a pessoa usuária insira os seguintes campos: -->
         <fieldset id="name-email-fieldset">
-          <!-- Nome Completo: -->
           <h2>Nome e Email</h2>
-          <!-- Limitado entre 10 e 40 caracteres. -->
-          <label for="name-input">Full Name:</label>
-          <input type="text" name="name" id="name-input" minlength="10" maxlength="40" placeholder="Digite seu nome">
-          <!-- E-mail: -->
-          <!-- Limitado entre 10 e 50 caracteres. -->
-          <label for="email-input">Email:</label>
-          <input type="email" name="email" id="email-input" minlength="10" maxlength="50" placeholder="Digite seu email">
+          <section id="name-section">
+            <!-- Nome Completo: -->
+            <!-- Limitado entre 10 e 40 caracteres. -->
+            <label for="name-input">Nome:</label>
+            <input type="text" name="name" id="name-input" minlength="10" maxlength="40" placeholder="Digite seu nome">
+          </section>
+          <section id="email-section">
+            <!-- E-mail: -->
+            <!-- Limitado entre 10 e 50 caracteres. -->
+            <label for="email-input">Email:</label>
+            <input type="email" name="email" id="email-input" minlength="10" maxlength="50" placeholder="Digite seu email" class="left-margin">
+          </section>
         </fieldset>
 
         <fieldset id="favorite-destiny-fieldset">
@@ -51,16 +55,20 @@
           <!-- Qual a melhor data para realizar sua viagem? -->
           <h2>Qual a melhor data para realizar sua viagem?</h2>
           <label for="trip-date">Data:</label>
-          <input type="date" name="trip-date" id="date-input">
+          <input type="date" name="trip-date" id="date-input" class="left-margin">
         </fieldset>
 
         <fieldset id="agreements-fieldset">
-          <!-- Gostaria de receber outras incríveis oportunidades oferecidas pela Trybe? -->
-          <label for="newsletter-checkbox">Gostaria de receber outras incríveis oportunidades oferecidas pela Trybe?</label>
-          <input type="checkbox" name="newsletter" id="newsletter-checkbox">
-          <!-- Concordo que imagens das minhas férias poderão ser usadas na divulgação de concursos futuros. -->
-          <label for="image-rights-checkbox">Concordo que imagens das minhas férias poderão ser usadas na divulgação de concursos futuros.</label>
-          <input type="checkbox" name="image-rights" id="image-rights-checkbox">
+          <section id="newsletter-section">
+            <!-- Gostaria de receber outras incríveis oportunidades oferecidas pela Trybe? -->
+            <label for="newsletter-checkbox">Gostaria de receber outras incríveis oportunidades oferecidas pela Trybe?</label>
+            <input type="checkbox" name="newsletter" id="newsletter-checkbox" class="left-margin">
+          </section>
+          <section id="image-rights-section">
+            <!-- Concordo que imagens das minhas férias poderão ser usadas na divulgação de concursos futuros. -->
+            <label for="image-rights-checkbox">Concordo que imagens das minhas férias poderão ser usadas na divulgação de concursos futuros.</label>
+            <input type="checkbox" name="image-rights" id="image-rights-checkbox" class="left-margin">
+          </section>
         </fieldset>
 
         <!-- Esses serão os principais campos utilizados nos próximos exercícios. -->
@@ -73,7 +81,7 @@
       </form>
     </main>
     <footer>
-      <p>Created by Kenny Koyama</p>
+      <p>Created by Kenny Koyama.</p>
     </footer>
     <script src="script.js"></script>
   </body>
