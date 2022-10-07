@@ -5,50 +5,59 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML e CSS: Forms Exercise</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <header>
-      <h1>TrybeTrip</h1>
+      <h1 class="display-2">TrybeTrip</h1>
     </header>
     <main>
       <form action="" method="get">
         <!-- O formulário deverá permitir que a pessoa usuária insira os seguintes campos: -->
         <fieldset id="name-email-fieldset">
           <h2>Nome e Email</h2>
-          <section id="name-section">
+          <section class="form-floating mb-3" id="name-section">
             <!-- Nome Completo: -->
             <!-- Limitado entre 10 e 40 caracteres. -->
+            <input class="form-control" type="text" name="name" id="name-input" minlength="10" maxlength="40" placeholder="Digite seu nome">
             <label for="name-input">Nome:</label>
-            <input type="text" name="name" id="name-input" minlength="10" maxlength="40" placeholder="Digite seu nome">
           </section>
-          <section id="email-section">
+          <section id="email-section" class="form-floating">
             <!-- E-mail: -->
             <!-- Limitado entre 10 e 50 caracteres. -->
+            <input class="form-control" type="email" name="email" id="email-input" minlength="10" maxlength="50" placeholder="Digite seu email">
             <label for="email-input">Email:</label>
-            <input type="email" name="email" id="email-input" minlength="10" maxlength="50" placeholder="Digite seu email" class="left-margin">
           </section>
         </fieldset>
 
-        <fieldset id="favorite-destiny-fieldset">
+        <fieldset id="favorite-destiny-fieldset" class="form-check">
           <!-- Destino Preferido: -->
           <h2>Destino Preferido</h2>
           <!-- 4 opções: Cidade, Campo, Praia, Montanhas. -->
-          <input type="radio" name="preferred-destiny" id="city-selector" value="city">
-          <label for="city-selector">Cidade</label>
-          <input type="radio" name="preferred-destiny" id="country-selector" value="country">
-          <label for="country-selector">Campo</label>
-          <input type="radio" name="preferred-destiny" id="beach-selector" value="beach">
-          <label for="beach-selector">Praia</label>
-          <input type="radio" name="preferred-destiny" id="montains-selector" value="mountains">
-          <label for="mountains-selector">Montanhas</label>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="preferred-destiny" id="city-selector" value="city">
+            <label class="form-check-label" for="city-selector">Cidade</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="preferred-destiny" id="country-selector" value="country">
+            <label class="form-check-label" for="country-selector">Campo</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="preferred-destiny" id="beach-selector" value="beach">
+            <label class="form-check-label" for="beach-selector">Praia</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="preferred-destiny" id="montains-selector" value="mountains">
+            <label class="form-check-label" for="mountains-selector">Montanhas</label>
+          </div>
         </fieldset>
 
-        <fieldset id="answer-fieldset">
+        <fieldset id="answer-fieldset" class="form-floating">
           <!-- Por que você deveria ser a pessoa desenvolvedora a ganhar o concurso TrybeTrip? -->
           <h2>Por que você deveria ser a pessoa desenvolvedora a ganhar o concurso TrybeTrip?</h2>
           <!-- Limite de 500 caracteres. -->
-          <textarea name="answer" id="answer" cols="45" rows="10" maxlength="500" placeholder="Digite sua resposta"></textarea>
+          <textarea class="form-control" name="answer" id="answer" cols="45" rows="10" maxlength="500" placeholder="Digite sua resposta"></textarea>
         </fieldset>
 
         <fieldset id="trip-date-fieldset">
@@ -59,15 +68,15 @@
         </fieldset>
 
         <fieldset id="agreements-fieldset">
-          <section id="newsletter-section">
+          <section id="newsletter-section" class="form-check form-switch">
             <!-- Gostaria de receber outras incríveis oportunidades oferecidas pela Trybe? -->
-            <label for="newsletter-checkbox">Gostaria de receber outras incríveis oportunidades oferecidas pela Trybe?</label>
-            <input type="checkbox" name="newsletter" id="newsletter-checkbox" class="left-margin" value="newsletter">
+            <label for="newsletter-checkbox" class="form-check-label">Gostaria de receber outras incríveis oportunidades oferecidas pela Trybe?</label>
+            <input type="checkbox" name="newsletter" id="newsletter-checkbox" class="form-check-input" value="newsletter">
           </section>
-          <section id="image-rights-section">
+          <section id="image-rights-section" class="form-check form-switch">
             <!-- Concordo que imagens das minhas férias poderão ser usadas na divulgação de concursos futuros. -->
-            <label for="image-rights-checkbox">Concordo que imagens das minhas férias poderão ser usadas na divulgação de concursos futuros.</label>
-            <input type="checkbox" name="image-rights" id="image-rights-checkbox" class="left-margin" value="image-rights">
+            <label for="image-rights-checkbox" class="form-check-label">Concordo que imagens das minhas férias poderão ser usadas na divulgação de concursos futuros.</label>
+            <input type="checkbox" name="image-rights" id="image-rights-checkbox" class="form-check-input" value="image-rights">
           </section>
         </fieldset>
 
@@ -75,7 +84,7 @@
 
         <fieldset id="buttons-fieldset">
           <!-- Crie um botão para enviar as informações preenchidas. -->
-          <input type="submit" value="Enviar" id="submit-button">
+          <input  class="btn btn-primary" type="submit" value="Enviar" id="submit-button">
           <!-- <input type="reset" value="Apagar"> -->
         </fieldset>
       </form>
@@ -84,5 +93,6 @@
       <p>Created by Kenny Koyama.</p>
     </footer>
     <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
   </body>
 </html>

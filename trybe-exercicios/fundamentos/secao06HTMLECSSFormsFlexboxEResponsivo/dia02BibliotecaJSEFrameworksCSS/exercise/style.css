@@ -11,6 +11,7 @@ body {
   width: 90%;
   margin: auto;
   gap: 1rem;
+  background-image: linear-gradient(to bottom, lightgreen, green);
 }
 
 header {
@@ -23,6 +24,8 @@ form {
   gap: 2em;
   border: 4px solid black;
   padding: 1em;
+  box-shadow: inset 0 0 6px black;
+  background-color: rgb(210, 255, 210);
 }
 
 h2 {
@@ -30,13 +33,13 @@ h2 {
   font-size: 1.5em;
 }
 
-fieldset {
+/* fieldset {
   border: none;
-}
+} */
 
-#name-email-fieldset input{
+/* #name-email-fieldset input{
   margin-top: 0.5em;
-}
+} */
 
 #agreements-fieldset {
   font-size: 0.9em;
@@ -60,6 +63,7 @@ fieldset {
 
 h1 {
   color: rgb(13, 179, 33);
+  text-shadow: 1px 1px 1px black;
 }
 
 footer {
