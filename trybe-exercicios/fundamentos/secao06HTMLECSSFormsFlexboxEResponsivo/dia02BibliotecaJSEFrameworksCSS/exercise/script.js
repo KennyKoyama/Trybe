@@ -45,10 +45,12 @@ buttonsFieldset.appendChild(resetButton);
 // };
 
 //Use Just Validate library
-const validate = new JustValidate('#form');
+const validation = new JustValidate('#form', {
+  errorFieldCssClass: 'is-invalid',
+});
 
-validate
-  .addField('#name-input', [
+validation
+  .addField('#name', [
     {
       rule: 'minLength',
       value: 5,
@@ -58,7 +60,7 @@ validate
       value: 50,
     },
   ])
-  .addField('#email-input', [
+  .addField('#email', [
     {
       rule: 'required',
       errorMessage: 'Email is required',
@@ -74,3 +76,21 @@ validate
       errorMessage: 'Image rights is required',
     }
   ]);
+
+// Bootstrap validation
+(() => {
+  'use strict'
+const forms = document.querySelectorAll('.needs-validation')
+
+// Loop over them and prevent submission
+Array.from(forms).forEach(form => {
+  form.addEventListener('submit', event => {
+    if (!form.checkValidity()) {
+      event.preventDefault()
+      event.stopPropagation()
+    }
+
+    form.classList.add('was-validated')
+  }, false)
+})
+})()
