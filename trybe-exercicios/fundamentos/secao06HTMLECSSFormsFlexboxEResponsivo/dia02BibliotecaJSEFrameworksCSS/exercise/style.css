@@ -17,7 +17,16 @@ body {
 }
 
 header {
-  padding: 1em;
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 1em 0 1em;
+  gap: 1em;
+}
+
+#trybe-logo {
+  width: 8rem;
 }
 
 form {
