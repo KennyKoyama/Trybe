@@ -73,8 +73,8 @@ h2 {
 }
 
 h1 {
-  color: rgb(13, 179, 33);
-  text-shadow: 1px 1px 1px black;
+  color: black;
+  text-shadow: -2px 2px 1px rgb(21, 157, 0);
 }
 
 footer {
