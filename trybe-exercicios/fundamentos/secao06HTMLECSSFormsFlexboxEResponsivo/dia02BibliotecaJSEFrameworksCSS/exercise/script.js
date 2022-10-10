@@ -8,16 +8,16 @@ const imageRights = document.querySelector('#image-rights-checkbox');
 // Interrompa o comportamento padrão do botão submit utilizando o método preventDefault().
 // (Bônus) A TrybeTrip precisa muito de fotos para divulgar seus concursos. Tendo isso em mente, faça com que somente quem autorizar o uso de imagens possa enviar suas informações.
 submitButton.addEventListener('click', (event) => {
+  console.log(isValid())
+  event.preventDefault();
   if (!isValid()) {
-    event.preventDefault();
     return;
     // return alert('Dados Inválidos');
   };
   if (!imageRights.checked) {
     alert('Você precisa concordar com o direito de uso de imagem para conseguir enviar.');
-    event.preventDefault();
   } else {
-    const fullName = document.querySelector('#name-input').value;
+    const fullName = nameInput.value;
     alert(`Formulário enviado com sucesso! Boa sorte ${fullName}! Obrigado por participar do concurso TrybeTrip.`);
   }
 });
@@ -38,7 +38,7 @@ const typeRadio = 'form-check-input';
 function toggleClass(selector, check) {
   const findType = selector.type;
   const findID = selector.id;
-  if (findType === 'text' || findType === 'textarea') selector.className = typeText;
+  if (findType === 'text' || findType === 'textarea' || findType === 'email') selector.className = typeText;
   if (findID === 'datepicker') selector.className = typeDate;
   if (findType === 'checkbox') {
     selector.className = typeCheckbox;
@@ -51,7 +51,6 @@ function toggleClass(selector, check) {
     element.className = 'form-check-input radio';
     label.className = 'form-check-label';
     if (!checkRadio()) {
-      console.log(element)
       element.classList.add('is-invalid-radio');
       label.classList.add('is-invalid-radio');
     };
