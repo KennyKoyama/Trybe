@@ -76,3 +76,7 @@ section hr {
 .gallery-img {
   width: 90%;
 }
+
+a {
+  text-decoration: none;
+}
