@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Ubuntu';
+  font-family: Ubuntu, 'Lucida Sans', sans-serif;
 }
 
 .header-img {
@@ -16,4 +16,19 @@
 .social-img {
   width: 25px;
   margin-left: 10px;
+}
+
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgb(53, 53, 53);
+  color: rgb(255, 250, 235);
+  font-size: 0.7em;
+}
+
+header h3 {
+  font-size: 1rem;
+  text-decoration: underline;
+  color: rgb(170, 170, 170);
 }
