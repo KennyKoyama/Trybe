@@ -11,6 +11,7 @@
 
 .gallery-img {
   width: 150px;
+  padding: 10%;
 }
 
 .social-img {
@@ -71,10 +72,6 @@ section div {
 section hr {
   width: 30%;
   margin-top: 1em;
-}
-
-.gallery-img {
-  width: 90%;
 }
 
 a {
