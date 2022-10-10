@@ -16,23 +16,23 @@
       <h1>trybeTrip</h1>
     </header>
     <main>
-      <form action="" id="form" class="needs-validation"  novalidate>
+      <form action="#" id="form" autocomplete="off" novalidate="novalidate">
         <!-- O formulário deverá permitir que a pessoa usuária insira os seguintes campos: -->
         <fieldset id="name-email-fieldset">
           <h2>Nome e Email</h2>
           <section class="form-floating mb-3" id="name-section">
             <!-- Nome Completo: -->
             <!-- Limitado entre 10 e 40 caracteres. -->
-            <input class="form__input form-control" type="text" name="name" id="name" minlength="10" maxlength="40" placeholder="Digite seu nome">
+            <input class="form__input form-control" type="text" name="name" id="name" placeholder="Digite seu nome" autocomplete="off" data-just-validate-fallback-disabled="false">
             <label for="name">Nome:</label>
-            <div class="valid-feedback">
+            <!-- <div class="valid-feedback">
               Looks good!
-            </div>
+            </div> -->
           </section>
           <section id="email-section" class="form-floating">
             <!-- E-mail: -->
             <!-- Limitado entre 10 e 50 caracteres. -->
-            <input class="form__input form-control" type="email" name="email" id="email" minlength="10" maxlength="50" placeholder="Digite seu email">
+            <input class="form__input form-control" type="email" name="email" id="email" placeholder="Digite seu email" autocomplete="off">
             <label for="email">Email:</label>
           </section>
         </fieldset>
@@ -69,8 +69,9 @@
         <fieldset id="trip-date-fieldset">
           <!-- Qual a melhor data para realizar sua viagem? -->
           <h2>Qual a melhor data para realizar sua viagem?</h2>
-          <label for="date-input">Data:</label>
-          <input type="text" name="trip-date" id="datepicker" class="left-margin date-input">
+          <label for="datepicker">Data:</label>
+          <input type="text" name="datepicker" id="datepicker" class="left-margin date-input">
+          <!-- <input type="date" name="dateInput" id="dateInput" class="left-margin date-input"> -->
         </fieldset>
 
         <fieldset id="agreements-fieldset">
@@ -90,7 +91,7 @@
 
         <fieldset id="buttons-fieldset">
           <!-- Crie um botão para enviar as informações preenchidas. -->
-          <input class="btn btn-primary" type="submit" value="Enviar" id="submit-button">
+          <input class="btn btn-primary" type="submit" value="Enviar" id="submit-btn">
           <input class="btn btn-danger" type="reset" value="Apagar">
         </fieldset>
       </form>
@@ -98,10 +99,9 @@
     <footer>
       <p>Created by Kenny Koyama.</p>
     </footer>
-    <script src="/exercise/node_modules/bootstrap/dist/js/bootstrap.js"></script>
     <script src="/exercise/node_modules/pikaday/pikaday.js"></script>
+    <script src="/exercise/node_modules/bootstrap/dist/js/bootstrap.js"></script>
     <script src="script.js"></script>
-    <script src="/exercise/node_modules/just-validate/dist/just-validate.production.min.js"></script>
     <script>
       var picker = new Pikaday({ field: document.getElementById('datepicker') });
     </script>
