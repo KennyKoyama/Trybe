@@ -27,6 +27,8 @@ body {
   display: flex;
   /* e para o container do menu 500px. Após aplicar as propriedades */
   flex-basis: 500px;
+  /* Adicione uma propriedade Flexbox que faça o container do menu crescer, quando houver espaço disponível */
+  flex-grow: 1;
 }
 
 .menu-container ul {
