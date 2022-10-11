@@ -82,6 +82,8 @@ body {
   display: flex;
   flex-direction: column;
   margin: 20px;
+  /* Aplique uma base de 350px para seu container aside */
+  flex-basis: 350px;
 }
 
 .aside-container h3, h4 {
