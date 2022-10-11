@@ -43,4 +43,6 @@ body {
   font-size: 1.3rem;
   list-style: none;
   margin-right: 10px;
+  /* Utilize a propriedade align-self no elemento correto para que o header */
+  align-self: center;
 }
