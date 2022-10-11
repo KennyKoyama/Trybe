@@ -12,6 +12,8 @@ body {
 .header-container {
   background-color: #5C687C;
   display: flex;
+  /* Adicione uma propriedade Flexbox que modifique a ordem em que o logo e os itens do menu aparecem na tela */
+  flex-direction: row-reverse;
 }
 
 .logo-container {
