@@ -84,6 +84,9 @@ body {
   margin: 20px;
   /* Aplique uma base de 350px para seu container aside */
   flex-basis: 350px;
+  /* Aplique um alinhamento para centralizar e outro para expandir */
+  justify-content: center;
+  flex-grow: 1;
 }
 
 .aside-container h3, h4 {
