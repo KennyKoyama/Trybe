@@ -57,6 +57,8 @@ body {
   flex-direction: column;
   /* Adicione uma propriedade que faça com que seu container de filmes tenha uma base de 700px */
   flex-basis: 700px;
+  /* Aplique uma propriedade com o valor 10 que expanda o container de filmes */
+  flex-grow: 10;
 }
 
 .movie-container h2 {
