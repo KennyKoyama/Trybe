@@ -89,3 +89,8 @@ p strong {
 
 
 /* Sem alterar a classe trick, faça com que o texto dela apareça somente quando a tela estiver com menos de 500px de largura. */
+@media screen and (min-width: 500px){
+  p {
+    display: none;
+  }
+}
