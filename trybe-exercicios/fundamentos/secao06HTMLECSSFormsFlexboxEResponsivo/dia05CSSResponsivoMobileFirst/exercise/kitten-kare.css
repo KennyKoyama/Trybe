@@ -79,7 +79,7 @@ body {
   height: 1%;
 }
 
-@media print, screen and ( min-width: 750px ) {
+@media print {
 /* Os elementos com id header, navigation e footer devem desaparecer; */
   #header, #navigation, #footer {
     display: none;
