@@ -1,0 +1,88 @@
+<!-- 🚀 Exercício 3 -->
+<!-- Crie uma página HTML que possua um contador de cliques. -->
+<!-- Além da estrutura básica do HTML, sua página deve possuir: -->
+<!-- Uma tag que receberá o valor atualizado da quantidade de clicks do botão. -->
+<!-- Um botão com o texto click aqui!, que receberá um event listener do tipo click; -->
+<!-- Na estrutura do script (dentro do HTML ou em um arquivo de JavaScript ): -->
+<!-- Crie uma variável clickCount que irá acumular o número de clicks do botão; -->
+<!-- Crie a lógica do evento, para que a cada click no botão, a variável seja atualizada -->
+<!-- com acréscimo de valor 1. Exemplo: Caso não tenha sido realizado nenhum click, o valor -->
+<!-- renderizado será de 0. Caso o botão seja clicado 5 vezes o valor renderizado no HTML -->
+<!-- será de 5. -->
+<!-- Dica: Nesse exercício utilize document. getElementById para retornar o elemento do DOM -->
+<!-- que deseja. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🚀 Exercício 3</title>
+  <style>
+    body {
+      display: flex;
+      flex-flow: column;
+      gap: 2em;
+      align-items: center;
+      justify-content: center;
+    }
+
+    main {
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+      gap: 2em;
+      box-shadow: 0 0 1em rgba(0, 0, 0, .5);
+      border-radius: 1em;
+      padding: 2em;
+    }
+
+    .display-count {
+      border: 1px solid;
+      box-shadow: inset 0 0 3px rgba(0, 0, 0, .5);
+      padding: 0.5em 1em;
+    }
+
+    .click-btn {
+      padding: 1em;
+      background-color: dodgerblue;
+      border-radius: 0.5em;
+      color: aliceblue;
+    }
+
+    footer {
+      width: 100%;
+      text-align: end;
+      padding-right: 2em;
+      position: fixed;
+      bottom: 0;
+      background-color: rgb(55, 55, 55);
+      color: white;
+    }
+    
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🚀 Exercício 3</h1>
+  </header>
+  <main>
+    <span id="display-count" class="display-count">0</span>
+    <button id="click-btn" class="click-btn">Click aqui!</button>
+  </main>
+  <footer>
+    <p>Created by Kenny Koyama.</p>
+  </footer>
+  <script>
+    const displayCount = document.querySelector('#display-count');
+    const clickBtn = document.querySelector('#click-btn');
+    let clickCount = 0;
+    clickBtn.addEventListener('click', () => {
+      clickCount += 1;
+      displayCount.innerHTML = clickCount;
+    })
+
+  </script>
+</body>
+</html>
