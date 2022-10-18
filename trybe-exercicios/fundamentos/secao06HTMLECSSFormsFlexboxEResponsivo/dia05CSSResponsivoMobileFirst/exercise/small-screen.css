@@ -111,14 +111,12 @@ telas grandes (por exemplo 1300px), e realize os seguintes ajustes dentro do bre
     font-size: 2rem;
     /* Ajuste as margens da página; */
     margin: 3em;
+    /* Adicione a propriedade max-width à página, para garantir que a largura das linhas não
+    fique muito grande. */
     max-width: 1500px;
   }
   /* Ajuste o tamanho da fonte; */
   article {
     font-size: 1em;
   }
-  
-  /* Adicione a propriedade max-width à página, para garantir que a largura das linhas não
-  fique muito grande. */
-  
 }

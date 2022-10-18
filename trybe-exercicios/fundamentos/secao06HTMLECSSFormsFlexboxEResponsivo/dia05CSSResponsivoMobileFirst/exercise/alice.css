@@ -1,0 +1,103 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5em;
+  list-style: none;
+}
+
+body {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  background-color: antiquewhite;
+}
+
+header {
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+  position: fixed;
+  background-color: blanchedalmond;
+  box-shadow: 0 1.5px 5px rgba(0, 0, 0, 0.5);
+}
+
+header > p {
+  font-family: fantasy;
+  font-size: 1.2rem;
+  text-align: center;
+  font-weight: 600;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+  margin: 0.8em 0.5em 0.2em 0.5em;
+}
+
+nav {
+  align-self: flex-end;
+  padding: 0.1rem 0.5rem;
+  position: absolute;
+  top: 3rem;
+  border-bottom-left-radius: 2px;
+  /* outline: 1px dashed; */
+  background-color: blanchedalmond;
+  box-shadow: 0 -5px 0 blanchedalmond,
+              -1px 1.5px 5px rgba(0, 0, 0, 0.5);
+}
+
+nav > ul {
+  text-decoration: none;
+  display: flex;
+  gap: 1em;
+}
+
+nav > ul::before {
+  content: '>';
+  color: blanchedalmond;
+  text-shadow: 0.3em 0 0 black,
+               0.2em 0 2px rgba(0, 0, 0, 0.5),
+               -0.3em 0 0 black,
+               -0.2em 0 2px rgba(0, 0, 0, 0.5);
+}
+
+header + * {
+  margin-top: 4em;
+}
+
+header ~ * {
+  padding: 0 1em;
+}
+
+h1 {
+  font-size: 1.5em;
+}
+
+.aside-one::after {
+  content: '';
+  display: block;
+  margin: 2em auto;
+  width: 80%;
+  background-color: black;
+  height: 1px;
+}
+
+.aside-two::after {
+  content: '';
+  display: block;
+  margin: 2em auto;
+  width: 80%;
+  background-color: black;
+  height: 1px;
+}
+
+footer {
+  background-color: black;
+  color: aliceblue;
+  font-size: 0.5em;
+  margin-top: 1em;
+  padding: 1em;
+}
