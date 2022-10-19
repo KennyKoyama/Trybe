@@ -46,3 +46,32 @@ console.log(verifyPair(lesson3, 'turno', 'noite'));
 // Output: true,
 console.log(verifyPair(lesson3, 'materia', 'Maria Clara'));
 // Output: false
+
+
+// 🚀 Bônus - Organizando lições
+const studentsBySubject = (objs, value) => Object.values(objs)
+                                                 .filter((obj) => obj.materia === value)
+                                                 .map((obj) => obj.numeroEstudantes)
+                                                 .reduce((total, current) => total + current, 0);
+console.log(studentsBySubject(allLessons, 'Matemática'));
+
+const subjectsByTeacher = (objs, value) => Object.values(objs)
+                                                 .filter((obj) => obj.professor === value)
+                                                 .map((obj) => obj.materia);
+console.log(subjectsByTeacher(allLessons, 'Maria Clara'));
+
+const studentsByTeacher = (objs, value) => Object.values(objs)
+                                                 .filter((obj) => obj.professor === value)
+                                                 .map((obj) => obj.numeroEstudantes)
+                                                 .reduce((total, current) => total + current, 0);
+console.log(studentsByTeacher(allLessons, 'Maria Clara'));
+
+const createReport = (objs, value) => ({professor: value,
+                                            aulas: subjectsByTeacher(objs, value),
+                                       estudantes: studentsByTeacher(objs, value)});
+console.log(createReport(allLessons, 'Maria Clara'));
+/* {
+  professor: 'Maria Clara',
+  aulas: [ 'Matemática', 'Matemática' ],
+  estudantes: 30
+} */
