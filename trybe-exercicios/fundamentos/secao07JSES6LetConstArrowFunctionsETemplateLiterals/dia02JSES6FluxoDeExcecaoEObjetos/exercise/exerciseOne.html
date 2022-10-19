@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang='pt-BR'>
+<head>
+  <meta charset='UTF-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title>Calculadora</title>
+</head>
+<body>
+  <p>Informe dois números para realizar a soma:</p>
+  <label for='value1'>Valor 1:</label>
+  <input type='text' id='value1'>
+  <label for='value2'>Valor 2:</label>
+  <input type='text' id='value2'>
+  <button id='button'>Somar</button>
+  <p id='result'></p>
+  <script>
+    function sum() {
+      const value1 = document.getElementById('value1').value;
+      const value2 = document.getElementById('value2').value;
+      console.log(!Number.isNaN(parseInt(value1)), value1, +value1)
+      try {
+        if (!value1 && !value2) throw new Error('Nenhum valor inserido.');
+        if (!value1 && value2) throw new Error('Preencha o primeiro valor.');
+        if (Number.isNaN(parseInt(value1))) throw new Error(`O valor 1 deve ser um números.`);
+        if (value1 && !value2) throw new Error('Preencha o segundo valor.');
+        if (Number.isNaN(parseInt(value2))) throw new Error(`O valor 2 deve ser um números.`);
+        const result = Number(value1) + Number(value2);
+        document.getElementById('result').innerHTML = `Resultado: ${result}`;
+      } catch (error) {
+        alert(error.message);
+      } finally {
+        if (!Number.isNaN(parseInt(value1)) && !Number.isNaN(parseInt(value2))) {
+          document.getElementById('value1').value = '';
+          document.getElementById('value2').value = '';
+        }
+      }
+    }
+    window.onload = () => {
+      const button = document.getElementById('button');
+      button.addEventListener('click', sum);
+    }
+  </script>
+</body>
+</html>
