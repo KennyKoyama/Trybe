@@ -5,12 +5,4 @@ const hydrate = (drinkAmount) => {
   return result;
 };
 
-
-
-console.log(hydrate('1 cerveja'));
-console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho'));
-console.log(hydrate('2 shots de tequila, 2 cervejas e 1 corote'));
-console.log(hydrate('1 copo de catuaba, 1 cervejas e 1 copo de vinho'));
-console.log(hydrate('4 caipirinhas e 2 cervejas'));
-
 module.exports = hydrate;
