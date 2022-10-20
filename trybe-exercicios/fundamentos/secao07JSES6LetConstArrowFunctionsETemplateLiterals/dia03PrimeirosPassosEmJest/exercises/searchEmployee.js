@@ -49,8 +49,4 @@ const searchEmployee = (id, detail) => {
   return result;
 };
 
-console.log(searchEmployee('4678-2', 'lastName'));
-console.log(searchEmployee('4678-2', 'dibiriba'));
-console.log(searchEmployee('4678-5', 'lastName'));
-
 module.exports = searchEmployee;
