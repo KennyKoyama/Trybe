@@ -17,4 +17,4 @@ describe('Test sum function:', () => {
   it('Sum of 4 and "5" to throw a error', () => {
     expect(() => {sum(4, '5')}).toThrow('parameters must be numbers');
   });
-})
+});
