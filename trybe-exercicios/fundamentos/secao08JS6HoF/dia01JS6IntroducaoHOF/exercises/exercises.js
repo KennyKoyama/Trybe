@@ -45,8 +45,8 @@ console.log(isWinner('2', sortNumber()))
 const RIGHT_ANSWERS = ['A', 'C', 'B', 'D', 'A', 'A', 'D', 'A', 'D', 'C'];
 const STUDENT_ANSWERS = ['A', 'N.A', 'B', 'D', 'A', 'C', 'N.A', 'A', 'D', 'B'];
 
-const autoFix = (rightAnswers, studentAnswers, funct) => funct(rightAnswers,studentAnswers).reduce((sum, curr) => sum + curr, 0);
-const score = (right, student) => student.map((studentAnswers, index) => studentAnswers === right[index] ? 1 : studentAnswers === 'N.A' ? 0 : -0.5);
+const checkScore = (rightAnswers, studentAnswers, funct) => funct(rightAnswers,studentAnswers).reduce((sum, curr) => sum + curr, 0);
 
-console.log(score(RIGHT_ANSWERS, STUDENT_ANSWERS))
-console.log(autoFix(RIGHT_ANSWERS, STUDENT_ANSWERS, score))
+const scores = (right, student) => student.map((studentAnswers, index) => studentAnswers === right[index] ? 1 : studentAnswers === 'N.A' ? 0 : -0.5);
+
+console.log(checkScore(RIGHT_ANSWERS, STUDENT_ANSWERS, scores))
