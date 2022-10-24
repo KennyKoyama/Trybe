@@ -5,15 +5,17 @@
 // um email no formato nome_da_pessoa@trybe.com
 
 
-const newEmployees = () => {
+const newEmployees = (employee1, employee2, employee3) => {
   const employees = {
-    id1: newEmployee('Pedro Guerra'), // Nome: Pedro Guerra -> Chame sua função passando o nome Pedro Guerra como parâmetro, substituindo as aspas
-    id2: newEmployee('Luiza Drumond'), // Nome: Luiza Drumond -> Chame sua função passando o nome Luiza Drumond como parâmetro, substituindo as aspas
-    id3: newEmployee('Carla Paiva'), // Nome: Carla Paiva -> Chame sua função passando o nome Carla Paiva como parâmetro, substituindo as aspas
+    id1: employee1, // Nome: Pedro Guerra -> Chame sua função passando o nome Pedro Guerra como parâmetro, substituindo as aspas
+    id2: employee2, // Nome: Luiza Drumond -> Chame sua função passando o nome Luiza Drumond como parâmetro, substituindo as aspas
+    id3: employee3, // Nome: Carla Paiva -> Chame sua função passando o nome Carla Paiva como parâmetro, substituindo as aspas
   }
   return employees;
 };
 
-const newEmployee = (fullName) => ( { nomeCompleto: fullName, email: `${fullName.split(' ')[0].toLowerCase()}@trybe.com` } );
+const newEmp = (fullName) => ( { nomeCompleto: fullName, email: `${fullName.split(' ')[0].toLowerCase()}@trybe.com` } );
 
-console.log(newEmployees());
+console.log(newEmployees(newEmp('Pedro Guerra'),newEmp('Luiza Drumond'),newEmp('Carla Paiva')));
+
+
