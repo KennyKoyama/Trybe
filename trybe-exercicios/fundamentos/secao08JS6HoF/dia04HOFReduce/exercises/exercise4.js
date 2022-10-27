@@ -15,12 +15,12 @@ function studentAverage() {
 
 // One line receiving arguments
 const studentAverageArrow = (studentNames, studentGrades) =>
-  studentNames.reduce((acc, curr, i) => 
-      acc.concat(
+  studentNames.reduce((array, currentName, index) => 
+      array.concat(
         {
-          name: curr,
-          average: studentGrades[i]
-            .reduce((acc, curr) => acc + curr) / studentGrades[i].length
+          name: currentName,
+          average: studentGrades[index]
+            .reduce((sum, currentGrade) => sum + currentGrade) / studentGrades[index].length
         }
       ),
     []
