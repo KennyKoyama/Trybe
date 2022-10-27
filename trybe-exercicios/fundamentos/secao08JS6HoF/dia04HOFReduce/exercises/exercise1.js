@@ -4,6 +4,7 @@ const arrays = [
   [4, 5, 6],
 ];
 
+// Utilize o reduce para transformar uma matriz em um array.
 function flatten() {
   // escreva seu código aqui
   return arrays.reduce((acc, curr) => acc.concat(curr))
