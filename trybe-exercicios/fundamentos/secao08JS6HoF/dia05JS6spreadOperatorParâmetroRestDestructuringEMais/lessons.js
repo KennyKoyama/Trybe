@@ -1,13 +1,13 @@
 // Lesson 1
 // Faça uma lista com as suas frutas favoritas
-const specialFruit = ['morango', 'banana', 'abacaxi'];
+const specialFruit = [ 'morango', 'banana', 'abacaxi' ];
 
 // Faça uma lista de complementos que você gostaria de adicionar
-const additionalItens = ['mel', 'suco de laranja', 'hortelã'];
+const additionalItens = [ 'mel', 'suco de laranja', 'hortelã' ];
 
-const fruitSalad = (fruit, additional) => {
+const fruitSalad = ( fruit, additional ) => {
   // Escreva sua função aqui
-  return [...fruit, ...additional]
+  return [ ...fruit, ...additional ];
 };
 
 console.log(fruitSalad(specialFruit, additionalItens));
@@ -28,8 +28,8 @@ const jobInfos = {
   squadInitials: 'RLL',
 };
 
-const {name , age, nationality} = user;
-const {profession, squad, squadInitials} = jobInfos;
+const { name , age, nationality } = user;
+const { profession, squad, squadInitials } = jobInfos;
 
 console.log(`Hi, my name is ${name}, I'm ${age} years old and I'm ${nationality}. I work as a ${profession} and my squad is ${squadInitials}-${squad}`)
 
@@ -37,12 +37,12 @@ console.log(`Hi, my name is ${name}, I'm ${age} years old and I'm ${nationality}
 // Lesson 3
 // Produza o mesmo resultado do código, porém utilizando o array destructuring
 // para recolher a função e a saudação.
-const saudacoes = ['Olá', (saudacao) => console.log(saudacao)];
+const saudacoes = [ 'Olá', (saudacao) => console.log(saudacao) ];
 
 saudacoes[1](saudacoes[0]); // Olá
 
 // Produza o mesmo resultado acima, porém utilizando array destructuring
-const [saudacao, funcao] = saudacoes;
+const [ saudacao, funcao ] = saudacoes;
 console.log(saudacao)
 console.log(funcao)
 
@@ -54,7 +54,7 @@ let animal = 'água';
 let bebida = 'arroz';
 // Utilizando array destructuring, faça com que os valores apareçam nas variáveis
 // correspondentes ao seu verdadeiro tipo
-[animal, bebida, comida] = [comida, animal, bebida];
+[ animal, bebida, comida ] = [ comida, animal, bebida ];
 console.log(comida, animal, bebida); // arroz gato água
 
 
@@ -63,7 +63,7 @@ console.log(comida, animal, bebida); // arroz gato água
 // números pares na variável numerosPares.
 let numerosPares = [1, 3, 5, 6, 8, 10, 12];
 // Utilize array destructuring para produzir o resultado esperado pelo console.log abaixo
-[,,,...numerosPares] = numerosPares;
+[ , , , ...numerosPares ] = numerosPares;
 console.log(numerosPares); // [6, 8, 10, 12];
 
 // Lesson 4
@@ -95,3 +95,15 @@ const getPosition = (latitude, longitude) => ({
 });
 
 console.log(getPosition(-19.8157, -43.9542));
+
+
+// Lesson 6
+// Para praticar, escreva uma função multiply que multiplique dois números passados como
+// argumentos. Atribua como default o valor 1, caso não seja passado nenhum valor como
+// segundo parâmetro.
+const multiply = (number, value = 1) => {
+  // Escreva aqui a sua função
+  return number * value;
+};
+
+console.log(multiply(8));
