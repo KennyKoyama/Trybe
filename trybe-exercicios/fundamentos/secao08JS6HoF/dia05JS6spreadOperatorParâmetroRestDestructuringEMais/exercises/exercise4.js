@@ -31,4 +31,3 @@ const people = [
 
 // escreva filterPeople abaixo
 const filterPeople = (list) => list.filter(({ bornIn }) => bornIn > 1900 && bornIn < 2001);
-console.log(filterPeople(people))
