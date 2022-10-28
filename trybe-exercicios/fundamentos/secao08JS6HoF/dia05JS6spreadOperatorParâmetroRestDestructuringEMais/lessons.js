@@ -66,7 +66,7 @@ let numerosPares = [1, 3, 5, 6, 8, 10, 12];
 [,,,...numerosPares] = numerosPares;
 console.log(numerosPares); // [6, 8, 10, 12];
 
-
+// Lesson 4
 // Do jeito que está, quando person é passado para a função getNationality o retorno
 // é João is undefined. Ajuste a função getNationality para que a chamada getNationality
 // (person) retorne João is Brazilian.
@@ -85,3 +85,13 @@ const otherPerson = {
 
 console.log(getNationality(otherPerson)); // Ivan is Russian
 console.log(getNationality(person));
+
+
+// Lesson 5
+// Agora é hora de praticar: altere a função getPosition utilizando a property shorthand.
+const getPosition = (latitude, longitude) => ({
+  latitude,
+  longitude,
+});
+
+console.log(getPosition(-19.8157, -43.9542));
