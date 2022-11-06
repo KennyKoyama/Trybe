@@ -73,7 +73,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [x] 8-6: _Projeto - Zoo Functions_
 
 
-## Desenvolvimento Web: Front-end :white_check_mark:
+## Desenvolvimento Web: Front-end :ballot_box_with_check:
 
 ##### Seção 1: Introdução ao Front-end e Javascript Assíncrono
 
@@ -138,7 +138,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [ ] 10-1: _Projeto - App de Receitas_
 
 
-## Desenvolvimento Web: Back-end :white_check_mark:
+## Desenvolvimento Web: Back-end :ballot_box_with_check:
 
 ##### Seção 1: Docker: Utilizando Containers
 
@@ -235,7 +235,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [ ] 14-2: _Dia 2_
 
 
-## Desenvolvimento Web: Ciência da Computação :white_check_mark:
+## Desenvolvimento Web: Ciência da Computação :ballot_box_with_check:
 
 ##### Seção 1: Introdução à Python
 
