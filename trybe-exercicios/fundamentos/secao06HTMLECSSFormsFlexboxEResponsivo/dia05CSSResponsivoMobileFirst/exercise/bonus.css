@@ -6,8 +6,12 @@
   color: white;
 }
 
+body {
+  /* width: 800px; */
+}
+
 header {
-  background-color: darkblue;
+  background-color: rgb(0, 0, 34);
   padding: 1rem;
   text-align: center;
 }
@@ -31,9 +35,6 @@ nav ul li a:hover {
   text-shadow: 0 0 1em;
 }
 
-body {
-  width: 800px;
-}
 
 img {
   width: 100%;
