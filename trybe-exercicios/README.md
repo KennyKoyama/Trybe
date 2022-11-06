@@ -83,6 +83,29 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [ ] 1-4: _Async, await e testes assíncronos_
 - [ ] 1-5: _Projeto - Carrinho de compras_
 
+##### Seção 2: Introdução ao React
+
+- [ ] 2-1: _"Hello, world" no React_
+- [ ] 2-2: _Componente React_
+- [ ] 2-3: _Projeto - Solar System_
+
+##### Seção 3: Componentes com Estado, Eventos e Formulários com React
+
+- [ ] 3-1: _"Hello, world" no React_
+- [ ] 3-2: _Formulário no React_
+- [ ] 3-3: _Projeto - Tryunfo_
+
+##### Seção 4: Componentes com Estado, Eventos e Formulários com React
+
+- [ ] 4-1: _Ciclo de vida de componentes_
+- [ ] 4-2: _React Router_
+- [ ] 4-3: _Projeto - TrybeTunes_
+
+##### Seção 5: Metodologias Ágeis
+
+- [ ] 5-1: _Metodologias Ágeis_
+- [ ] 5-2: _Projeto - Front-end Online Store_
+
 [etc...]
 
 Meu primeiro repositório git!!
