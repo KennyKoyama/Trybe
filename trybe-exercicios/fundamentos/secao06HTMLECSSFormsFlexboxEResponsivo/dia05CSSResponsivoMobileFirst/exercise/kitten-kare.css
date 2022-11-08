@@ -1,0 +1,171 @@
+body {
+  margin: 0;
+}
+
+#container {
+  margin: 0 auto;
+  width: 100%;
+  background: #fff;
+}
+
+#header {
+  background: #ccc;
+  padding: 20px;
+}
+
+#header h1 {
+  margin: 0;
+}
+
+#navigation {
+  width: 100%;
+  background: #333;
+}
+
+#navigation ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+#navigation ul li {
+  list-style-type: none;
+  display: flex;
+}
+
+#navigation li a {
+  padding: 5px 10px;
+  color: #fff;
+  text-decoration: none;
+  border-right: 1px solid #fff;
+}
+
+#navigation li a:hover {
+  background: #383;
+}
+
+#content-container {
+  width: 100%;
+  background: #FFF;
+}
+
+#content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 60%;
+  padding: 20px 0;
+  margin: 0 0 0 4%;
+}
+
+#content h2 {
+  margin: 0;
+}
+
+#aside {
+  width: 33%;
+  padding: 20px 0;
+  margin: 0 3% 0 0;
+}
+
+#aside h3 {
+  margin: 5px;
+}
+
+#footer {
+  background: #ccc;
+  text-align: right;
+  padding: 20px;
+  height: 1%;
+}
+
+@media print {
+/* Os elementos com id header, navigation e footer devem desaparecer; */
+  #header, #navigation, #footer {
+    display: none;
+  }
+
+/* O elemento com id aside deve ser mostrado abaixo do conteúdo principal. */
+  body {
+    padding: 2em;
+  }
+
+  #content-container {
+    display: flex;
+    flex-flow: column;
+  }
+
+  #content {
+    width: auto;
+  }
+
+  #content > p {
+    display: flex;
+    width: 100%;
+  }
+
+}
+
+/* Adicione uma media query no arquivo CSS e as regras necessárias para que a página se
+pareça com as imagens abaixo quando a tela for redimensionada para larguras menores. */
+
+@media screen and ( min-width: 240px ) and ( max-width: 360px ) {
+  /* O elemento com id aside deve desaparecer; */
+  #aside {
+    display: none;
+  }
+
+  /* As imagens não devem exceder a largura da tela; */
+  img {
+    width: 100%;
+  }
+
+  /* O elemento com id header deve ser fixo, de forma que ele fique aparecendo sempre
+  no topo da tela, mesmo após a pessoa usuária rolar a página. */
+  #header {
+    position: fixed;
+    width: 100%;
+    height: 5%;
+  }
+
+  /* O elemento body não deve ter padding; */
+  body {
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+  }
+
+  #container {
+    display: flex;
+    flex-flow: column;
+  }
+
+  #content-container {
+    flex-flow: column;
+  }
+
+  #navigation {
+    margin-top: 5em;
+  }
+
+  /* Os itens dentro do elemento navigation devem aparecer cada um em sua própria linha; */
+  #navigation > ul {
+    flex-flow: column;
+  }
+
+  #navigation ul li a {
+    border: none;
+    width: 100%;
+  }
+
+  #content {
+    width: auto;
+    padding: 1em;
+  }
+
+  #footer {
+    padding: 1em;
+    text-align: center;
+  }
+
+}

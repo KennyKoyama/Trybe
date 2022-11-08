@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "bootstrap": "^5.2.2",
+    "just-validate": "^3.8.1",
+    "pikaday": "^1.8.2"
+  }
+}

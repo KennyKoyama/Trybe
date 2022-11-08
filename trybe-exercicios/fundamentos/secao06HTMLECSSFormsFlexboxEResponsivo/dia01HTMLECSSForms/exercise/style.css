@@ -1,0 +1,68 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: auto;
+  gap: 1rem;
+}
+
+header {
+  padding: 1em;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  border: 4px solid black;
+  padding: 1em;
+}
+
+h2 {
+  font-weight: 400;
+  font-size: 1.5em;
+}
+
+fieldset {
+  border: none;
+}
+
+#name-email-fieldset input{
+  margin-top: 0.5em;
+}
+
+#agreements-fieldset {
+  font-size: 0.9em;
+}
+
+#buttons-fieldset {
+  display: flex;
+  gap: 1em;
+  justify-content: center;
+}
+
+#buttons-fieldset input {
+  font-size: 1em;
+  padding: 0.4em 3em;
+  border-radius: 10px;
+}
+
+.left-margin {
+  margin-left: 1ch;
+}
+
+h1 {
+  color: rgb(13, 179, 33);
+}
+
+footer {
+  text-align: end;
+  padding-bottom: 0.5em;
+}

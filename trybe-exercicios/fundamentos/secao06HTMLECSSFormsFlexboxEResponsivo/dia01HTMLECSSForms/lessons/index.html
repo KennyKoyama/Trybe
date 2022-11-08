@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML e CSS: Forms</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+      <h1>HTML e CSS: Forms</h1>
+    </header>
+    <main>
+      <form action="" method="get" class="custom-box">
+        <h2>Primeira Parte:</h2>
+        <!-- Adicione os campos de entrada para email e senha. -->
+        <section id="emailContainer">
+          <!-- Adicione os placeholder Digite seu email e Digite sua senha para os campos de email e senha. -->
+          <!-- Adicione o atributo required para os campos de email e senha. -->
+          <!-- Adicione o atributo autocomplete="off" para o campo de email. -->
+          <!-- Adicione o atributo autofocus para o campo de email. -->
+          <label for="inputEmail">Email:</label>
+          <input type="email" name="email" id="inputEmail" placeholder="Digite seu email" required autocomplete="off" autofocus>
+          <label for="inputPassword">Password:</label>
+          <input type="password" name="password" id="inputPassword" placeholder="Digite sua senha" required>
+        </section>
+
+        <!-- Adicione um checkbox com o texto Lembre-me. -->
+        <section id="checkboxContainer">
+          <label for="checkboxInput">Lembre-me:</label>
+          <input type="checkbox" name="remindeMe" id="checkboxInput">
+        </section>
+
+        <!-- Adicione um botão com o texto Entrar; crie o botão através da tag <input>. -->
+        <section id="enterButtonContainer">
+          <input type="button" value="Entrar">
+        </section>
+      </form>
+
+      <section id="second-part" class="custom-box">
+        <h2>Segunda Parte</h2>
+        <a href="www.betrybe.com" target="_blank" id="href">TRYBE</a>
+        <input type="text" id="input-text"/>
+        <input type="checkbox" id="input-checkbox" />
+      </section>
+    </main>
+    <footer>
+      <p>Created by Kenny Koyama.</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

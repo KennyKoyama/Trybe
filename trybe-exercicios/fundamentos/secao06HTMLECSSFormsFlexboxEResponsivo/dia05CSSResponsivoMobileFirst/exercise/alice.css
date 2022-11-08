@@ -1,0 +1,261 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5em;
+  list-style: none;
+}
+
+body {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  background-color: antiquewhite;
+}
+
+header {
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+  position: fixed;
+  background-color: blanchedalmond;
+  box-shadow: 0 1.5px 5px rgba(0, 0, 0, 0.5);
+}
+
+header > p {
+  font-family: fantasy;
+  font-size: 1.2rem;
+  text-align: center;
+  font-weight: 600;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+  margin: 0.8em 0.5em 0.2em 0.5em;
+}
+
+nav {
+  align-self: flex-end;
+  padding: 0.1rem 0.5rem;
+  position: absolute;
+  top: 3rem;
+  border-bottom-left-radius: 2px;
+  /* outline: 1px dashed; */
+  background-color: blanchedalmond;
+  box-shadow: 0 -5px 0 blanchedalmond,
+              -1px 1.5px 5px rgba(0, 0, 0, 0.5);
+}
+
+nav > ul {
+  text-decoration: none;
+  display: flex;
+  gap: 1em;
+}
+
+nav > ul::before {
+  content: '>';
+  color: blanchedalmond;
+  text-shadow: 0.3em 0 0 black,
+               0.2em 0 2px rgba(0, 0, 0, 0.5),
+               -0.3em 0 0 black,
+               -0.2em 0 2px rgba(0, 0, 0, 0.5);
+}
+
+header + * {
+  margin-top: 4em;
+}
+
+header ~ * {
+  padding: 0 1em;
+}
+
+h1 {
+  font-size: 1.5em;
+}
+
+.aside-one::after {
+  content: '';
+  display: block;
+  margin: 2em auto;
+  width: 80%;
+  background-color: black;
+  height: 1px;
+}
+
+.aside-two::after {
+  content: '';
+  display: block;
+  margin: 2em auto;
+  width: 80%;
+  background-color: black;
+  height: 1px;
+}
+
+footer {
+  background-color: black;
+  color: aliceblue;
+  font-size: 0.5em;
+  margin-top: 1em;
+  padding: 1em;
+}
+
+@media screen and ( min-width: 650px ) {
+  header {
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1em;
+  }
+  
+  nav {
+    align-self: center;
+    padding: 0.1rem 0.5rem;
+    position: initial;
+    top: 0;
+    border-radius: 0;
+    /* outline: 1px dashed; */
+    background-color: transparent;
+    box-shadow: none;
+  }
+  
+  nav > ul::before {
+    display: none;
+  }
+
+  header ~ * {
+    padding: 0 3em;
+  }
+
+  .aside-one {
+    background-color: blanchedalmond;
+    width: fit-content;
+    padding: 1em 2.5em 1em 1em;
+    height: 23em;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    border-radius: 0 5px 5px 0;
+    position: fixed;
+    top: 4em;
+    left: -16.5em;
+    transition: left 800ms ease-in-out;
+  }
+
+  .aside-one::after {
+    display: flex;
+    position: relative;
+    right: -9.1em;
+    top: -12em;
+    height: 2px;
+    transform: rotateZ(90deg);
+  }
+
+  .aside-one:hover , .aside-one:active {
+    left: 0;
+  }
+
+  .aside-two {
+    background-color: blanchedalmond;
+    width: fit-content;
+    padding: 1em 1em 1em 2.5em;
+    height: 12em;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    border-radius: 5px 0 0 5px;
+    position: fixed;
+    top: 8em;
+    right: -19em;
+    transition: right 800ms ease-in-out;
+  }
+
+  .aside-two::after {
+    display: flex;
+    position: relative;
+    left: -10.3em;
+    top: -6.7em;
+    width: 8em;
+    height: 2px;
+    transform: rotateZ(90deg);
+  }
+
+  .aside-two:hover , .aside-two:active {
+    right: 0;
+  }
+
+  article {
+    margin-top: 5em;
+  }
+
+  footer {
+    font-size: 0.7em;
+    padding: 1em;
+  }
+
+}
+
+@media screen and ( min-width: 1024px ) {
+  header > p {
+    font-size: 2.2em;
+  }
+
+  nav {
+    font-size: 2em;
+  }
+
+  article {
+    font-size: 1.5em;
+  }
+
+  footer {
+    font-size: 1em;
+  }
+
+}
+
+@media screen and ( min-width: 1300px ) {
+  header {
+    background-color: maroon;
+    color: white;
+  }
+
+  .aside-one {
+    left: 0;
+    top: 11em;
+    width: 19em;
+    height: 75%;
+    padding: 1em;
+    font-size: 1.5em;
+    box-shadow: 2px 0 0 rgba(0, 0, 0, 0.2);
+    z-index: -1;
+  }
+
+  .aside-one::after {
+    display: none;
+  }
+  
+  .aside-two {
+    width: 19em;
+    height: 25%;
+    top: 3.6em;
+    left: 0;
+    padding: 1em;
+    font-size: 1.5em;
+    box-shadow: 2px 0 0 rgba(0, 0, 0, 0.2);
+    z-index: -1;
+  }
+
+  .aside-two::after {
+    display: none;
+  }
+
+  article {
+    padding-left: 20em;
+    padding-bottom: 8em;
+  }
+
+  footer {
+    position: fixed;
+    bottom: 0;
+  }
+
+}
