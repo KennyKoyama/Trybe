@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "dev": "vite --open",
-    "lint": "eslint ./src"
+    "lint": "eslint ./src",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "keywords": [],
   "author": "",
