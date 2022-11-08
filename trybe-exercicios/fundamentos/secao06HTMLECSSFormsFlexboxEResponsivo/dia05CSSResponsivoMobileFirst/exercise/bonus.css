@@ -1,0 +1,103 @@
+* {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+
+body {
+  /* width: 800px; */
+}
+
+header {
+  width: 100%;
+  background-color: rgb(0, 0, 34);
+  text-align: center;
+  display: flex;
+  flex-flow: column;
+  position: fixed;
+  /* border-bottom: 1px solid; */
+  box-shadow: 0 3px 1rem rgba(30, 0, 255, 0.231);
+}
+
+h1 {
+  padding: 1rem;
+}
+
+nav {
+  height: fit-content;
+  justify-self: flex-end;
+  /* outline: 1px dashed green; */
+  /* display: flex; */
+}
+
+nav ul {
+  text-align: end;
+  background-color: rgb(6, 43, 84);
+  height: 2rem;
+}
+nav ul li{
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
+  
+}
+nav ul li a {
+  text-decoration: none;
+  font-weight: bold;
+}
+nav ul li a:hover {
+  color: rgb(189, 93, 189);
+  text-shadow: 0 0 1em;
+}
+
+
+img {
+  width: 100%;
+}
+
+main {
+  background-color: rgb(0, 0, 53);
+  padding: 10rem 2rem;
+}
+
+main h2 {
+  text-decoration: underline;
+  margin-bottom: 1.5rem;
+}
+
+.classificacao {
+  float: right;
+  background-color: black;
+  border: 1px solid;
+  margin-left: 1rem;
+  border-radius: 0.1em;
+  padding: 1em;
+  text-align: justify;
+}
+
+.classificacao caption {
+  font-weight: bold;
+  margin-bottom: 1em;
+}
+
+.introducao p {
+  margin-top: 0.5em;
+}
+.visao, .patas, .femea, .referencias, .video {
+  margin-top: 3rem;
+}
+
+footer {
+  background-color: aliceblue;
+  text-align: center;
+  font-weight: bold;
+}
+
+footer p {
+  color: black;
+}
+
+iframe {
+  display: none;
+}
