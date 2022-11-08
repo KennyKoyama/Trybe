@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Read page</title>
+    <link rel="stylesheet" href="exercise.css">
+</head>
+<body>
+    <header>
+        <h1>Lorem Ipsum</h1>
+    </header>
+    <section class="custom">
+        <section class="content">
+            <div>
+                <label for="bgColor">Cor de fundo da tela:  </label>
+                <input type="color" id="bgColorPicker" class="colorPicker" name="bgColor" value="white">
+                <label for="fontColor" class="fontColorPicker">Cor do texto:  </label>
+                <input type="color" id="fontColorPicker" class="ColorPicker" name="fontColor">
+            </div>
+            <div>
+                <label for="fontSize">Tamanho da fonte:  </label>
+                <input type="range" id="fontSizeSlider" name="fontSize" min="10" max="50">
+                <span id="fontSizeSpan"></span>
+            </div>
+            <div>
+                <label for="textLineGap">Espaçamento entre as linhas do texto:  </label>
+                <input type="range" id="textLineGapSlider" name="textLineGap" min="1" max="5">
+                <span id="lineHeightSpan"></span>
+            </div>
+            <div id="fontFamilyContainer">
+                <label for="vol">Tipo da fonte:  </label>
+                <input type="button" value="Arial" id="fontFamilyArialBtn"  class="button">
+                <input type="button" value="Verdana" id="fontFamilyVerdanaBtn"  class="button">
+                <input type="button" value="Impact" id="fontFamilyImpactBtn"  class="button">
+                <input type="button" value="Georgia" id="fontFamilyGeorgiaBtn"  class="button">
+                <input type="button" value="Cursive" id="fontFamilyCursiveBtn"  class="button">
+            </div>
+        </section>
+        <h2 class="hoverBtn">Preferencias:</h2>
+    </section>
+    <main>
+        <h3>What is Lorem Ipsum</h3>
+        <p><em>Lorem Ipsum</em> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+    </main>
+    <script src="exercise.js"></script>
+</body>
+</html>

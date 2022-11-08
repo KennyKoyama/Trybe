@@ -1,0 +1,75 @@
+<main id="paiDoPai">
+    <section id="pai">
+      <section id="primeiroFilho"></section>
+      <section id="elementoOndeVoceEsta">
+        <section id="primeiroFilhoDoFilho"></section>
+        <section id="segundoEUltimoFilhoDoFilho"></section>
+      </section>
+      Atenção!
+      <section id="terceiroFilho"></section>
+      <section id="quartoEUltimoFilho"></section>
+    </section>
+    <script>
+        // Acesse o elemento elementoOndeVoceEsta.
+        const start = document.getElementById('elementoOndeVoceEsta');
+        console.log('Start:', start);
+
+        // Acesse pai a partir de elementoOndeVoceEsta e adicione uma color a ele.
+        const father = start.parentNode;
+        console.log('Father: ', father);
+        father.style = 'background-color: darkgreen;';
+
+        // Acesse o primeiroFilhoDoFilho e adicione um texto a ele.
+        const firstChildOfChild = start.firstElementChild;
+        firstChildOfChild.innerText = 'First Child of Child';
+        console.log('First Child of Child:', firstChildOfChild);
+
+        // Acesse o primeiroFilho a partir de pai.
+        const firstChildFromFather = father.firstElementChild;
+        console.log('First Child From Father:', firstChildFromFather);
+
+        // Agora acesse o primeiroFilho a partir de elementoOndeVoceEsta.
+        const firstChildFromStart = start.previousElementSibling;
+        console.log('First Child From Start:', firstChildFromStart);
+
+        // Agora acesse o texto Atenção! a partir de elementoOndeVoceEsta.
+        const nextSiblingOfStart = start.nextSibling;
+        console.log('Next Sibling of Start:', nextSiblingOfStart);
+
+        // Agora acesse o terceiroFilho a partir de elementoOndeVoceEsta.
+        const thirdChildFromStart = start.nextElementSibling;
+        console.log('Third Child from Start:', thirdChildFromStart);
+
+        // Agora acesse o terceiroFilho a partir de pai.
+        const thirdChildFromFather = father.lastElementChild.previousElementSibling;
+        console.log('Third Child of Father:', thirdChildFromFather);
+
+        // Crie um irmão para elementoOndeVoceEsta.
+        const siblingOfStart = document.createElement('section');
+        siblingOfStart.id = 'newSiblingOfStart';
+        father.appendChild(siblingOfStart);
+
+        // Crie um filho para elementoOndeVoceEsta.
+        const childOfStart = document.createElement('section');
+        childOfStart.id = 'newChildOfStart';
+        start.appendChild(childOfStart);
+
+        // Crie um filho para primeiroFilhoDoFilho.
+        const childOfFirstChildOfStart = document.createElement('section');
+        childOfFirstChildOfStart.id = 'newChildOfFirstChildOfStart';
+        firstChildOfChild.appendChild(childOfFirstChildOfStart);
+
+        // A partir desse filho criado, acesse terceiroFilho.
+        childOfFirstChildOfStart.parentElement.parentElement.nextElementSibling;
+
+        // Remova todos os elementos filhos de paiDoPai exceto pai,
+        // elementoOndeVoceEsta e primeiroFilhoDoFilho.
+        const childList = document.querySelectorAll('section');
+        for (const element of childList) {
+            if (element.id != 'pai' && element.id != 'elementoOndeVoceEsta' && element.id != 'primeiroFilhoDoFilho') {
+                element.remove();
+            };
+        }
+
+    </script>
+  </main>
