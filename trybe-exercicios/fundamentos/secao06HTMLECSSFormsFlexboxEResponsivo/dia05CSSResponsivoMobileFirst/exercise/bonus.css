@@ -11,9 +11,25 @@ body {
 }
 
 header {
+  width: 100%;
   background-color: rgb(0, 0, 34);
-  padding: 1rem;
   text-align: center;
+  display: flex;
+  flex-flow: column;
+  position: fixed;
+  /* border-bottom: 1px solid; */
+  box-shadow: 0 3px 1rem rgba(30, 0, 255, 0.231);
+}
+
+h1 {
+  padding: 1rem;
+}
+
+nav {
+  height: fit-content;
+  justify-self: flex-end;
+  /* outline: 1px dashed green; */
+  /* display: flex; */
 }
 
 nav ul {
@@ -42,7 +58,7 @@ img {
 
 main {
   background-color: rgb(0, 0, 53);
-  padding: 2rem;
+  padding: 10rem 2rem;
 }
 
 main h2 {
