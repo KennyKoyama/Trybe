@@ -10,6 +10,6 @@ validateBtn.addEventListener('click', () => {
   const text = inputText.value;
   const option = dropdown.selectedOptions[0].value;
   const optionText = dropdown.selectedOptions[0].text;
-  const isValid = validator[option](text);
-  result.innerHTML = `${text} ${optionText}? ${isValid}`;
+  const isValid = String(validator[option](text)).toUpperCase();
+  result.innerHTML = `${text} ${optionText}?  ${isValid}!`;
 });
