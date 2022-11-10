@@ -5,8 +5,9 @@
 }
 
 body {
-  display: flex;
-  justify-content: center;
+  /* display: flex; */
+  /* justify-content: center; */
+  height: 90vh;
 }
 
 main {
@@ -15,8 +16,6 @@ main {
   flex-flow: column;
   align-items: center;
   gap: 2rem;
-  outline: 2px solid blue;
-  width: 500px;
 }
 
 #buttons {
@@ -33,10 +32,14 @@ button {
 }
 
 figure {
-  border-radius: 1rem;
+  border-radius: 0.5rem;
   padding: 0.5rem;
+  margin: 2rem;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, .5);
+  max-width: 60%;
+  display: flex;
 }
 
-image {
+img {
   width: 100%;
 }
