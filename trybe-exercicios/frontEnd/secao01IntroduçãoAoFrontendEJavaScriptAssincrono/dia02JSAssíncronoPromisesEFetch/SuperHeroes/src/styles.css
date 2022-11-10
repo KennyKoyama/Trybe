@@ -1,0 +1,12 @@
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#container {
+  width: 250px;
+  height: 350px;
+  outline: 1px solid;
+}
