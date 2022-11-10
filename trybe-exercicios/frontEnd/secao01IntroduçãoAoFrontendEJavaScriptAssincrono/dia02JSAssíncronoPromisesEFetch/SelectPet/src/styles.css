@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+}
+
+main {
+  margin-top: 3rem;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  gap: 2rem;
+  outline: 2px solid blue;
+  width: 500px;
+}
+
+#buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  background-color: rgb(50, 48, 60);
+  color: white;
+  border-radius: 0.5rem;
+}
+
+figure {
+  border-radius: 1rem;
+  padding: 0.5rem;
+}
+
+image {
+  width: 100%;
+}
