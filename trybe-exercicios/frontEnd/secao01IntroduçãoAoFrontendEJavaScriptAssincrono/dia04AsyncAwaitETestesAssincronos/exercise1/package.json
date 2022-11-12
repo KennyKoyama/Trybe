@@ -2,16 +2,17 @@
   "name": "dia04asyncawaitetestesassincronos",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "main.js",
   "scripts": {
     "dev": "vite --open",
     "build": "vite build",
-    "test": "jest"
+    "test": "NODE_OPTIONS=--experimental-vm-modules NODE_NO_WARNINGS=1 npx jest"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "node-fetch": "^3.3.0",
     "sweetalert2": "^11.6.8",
     "vite": "^3.2.3"
   },

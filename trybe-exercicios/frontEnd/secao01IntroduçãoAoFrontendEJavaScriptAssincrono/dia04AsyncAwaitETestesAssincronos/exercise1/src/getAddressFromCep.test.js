@@ -1,4 +1,4 @@
-import getAddressFromCep from './getAddressFromCep.js';
+import getAddressFromCep from './getAddressFromCep';
 
 import fetch from 'node-fetch'; //necessário em versões abaixo do Node 18.
 global.fetch = fetch; //necessário em versões abaixo do Node 18.
