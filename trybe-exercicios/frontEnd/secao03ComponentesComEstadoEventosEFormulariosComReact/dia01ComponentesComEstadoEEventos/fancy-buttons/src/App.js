@@ -1,17 +1,17 @@
 import React, { Component } from 'react';
 import Button from './components/Button';
 
-const hello = () => console.log('Hello');
-const world = () => console.log('World');
-const exclamations = () => console.log('!!!');
 
 class App extends Component {
+  hello = () => console.log('Hello');
+  world = () => console.log('World');
+  exclamations = () => console.log('!!!');
   render() {
     return (
       <div>
-        <Button func={hello} btnName='Hello' />
-        <Button func={world} btnName='World' />
-        <Button func={exclamations} btnName='!!!' />
+        <Button func={this.hello} btnName='Hello' />
+        <Button func={this.world} btnName='World' />
+        <Button func={this.exclamations} btnName='!!!' />
       </div>
     )
   }
