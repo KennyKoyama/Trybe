@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 
 class Checkbox extends Component {
   render() {
-    const { updateState } = this.props;
+    const { checkboxState: { checkbox1, checkbox2 }, updateState } = this.props;
     return (
       <fieldset id='checkboxField'>
         <legend>CheckBox</legend>
@@ -13,6 +13,7 @@ class Checkbox extends Component {
           id='checkbox1'
           value='checkbox1'
           onChange={({target:{checked}}) => updateState('checkbox1', checked)}
+          checked={checkbox1}
         />
         <label htmlFor='checkbox1'>Checkbox 1</label>
         <input
@@ -21,6 +22,7 @@ class Checkbox extends Component {
           id='checkbox2'
           value='checkbox2'
           onChange={({target:{checked}}) => updateState('checkbox2', checked)}
+          checked={checkbox2}
         />
         <label htmlFor='checkbox2'>Checkbox 2</label>
       </fieldset>

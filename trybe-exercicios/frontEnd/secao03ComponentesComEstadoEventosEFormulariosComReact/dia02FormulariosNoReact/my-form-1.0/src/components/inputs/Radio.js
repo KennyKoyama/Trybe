@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 
 class Radio extends Component {
   render() {
-    const { updateState } = this.props;
+    const { radioState, updateState } = this.props;
     return (
       <fieldset id='radiosField'>
         <legend>Radios</legend>
@@ -13,6 +13,7 @@ class Radio extends Component {
           name='radios'
           value='Radio1'
           onChange={() => updateState('radio', 'radio1')}
+          checked={radioState === 'radio1'}
         />
         <label htmlFor='radio1'>Radio1</label>
         <input
@@ -21,6 +22,7 @@ class Radio extends Component {
           name='radios'
           value='Radio2'
           onChange={() => updateState('radio', 'radio2')}
+          checked={radioState === 'radio2'}
         />
         <label htmlFor='radio2'>Radio2</label>
         <input
@@ -29,6 +31,7 @@ class Radio extends Component {
           name='radios'
           value='Radio3'
           onChange={() => updateState('radio', 'radio3')}
+          checked={radioState === 'radio3'}
         />
         <label htmlFor='radio3'>Radio3</label>
       </fieldset>

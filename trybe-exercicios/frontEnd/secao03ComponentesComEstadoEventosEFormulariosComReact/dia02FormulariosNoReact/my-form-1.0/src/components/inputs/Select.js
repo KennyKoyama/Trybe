@@ -3,12 +3,17 @@ import React, { Component } from 'react';
 
 class Select extends Component {
   render() {
-    const { updateState } = this.props;
+    const { selectState, updateState } = this.props;
     return (
       <fieldset id='selectField'>
         <legend>Select</legend>
         <label htmlFor='select'>Escolha uma opção:</label>
-        <select id='select' name='select' onChange={({target:{value}}) => updateState('select', value)}>
+        <select
+          id='select'
+          name='select'
+          onChange={({target:{value}}) => updateState('select', value)}
+          value={selectState}
+        >
           <option value='option1'>Opção 1</option>
           <option value='option2'>Opção 2</option>
         </select>

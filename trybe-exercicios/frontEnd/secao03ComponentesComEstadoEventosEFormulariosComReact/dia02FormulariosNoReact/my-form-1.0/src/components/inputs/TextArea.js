@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 
 class TextArea extends Component {
   render() {
-    const { updateState } = this.props;
+    const { textareaState, updateState } = this.props;
     return (
       <fieldset id='textareaField'>
         <legend>TextArea</legend>
@@ -11,7 +11,10 @@ class TextArea extends Component {
           name='textarea'
           placeholder='Insira o texto.'
           id='textarea'
-          onChange={({target:{value}}) => updateState('textarea', value)}></textarea>
+          onChange={({target:{value}}) => updateState('textarea', value)}
+          value={textareaState}
+        >
+        </textarea>
       </fieldset>
     );
   };

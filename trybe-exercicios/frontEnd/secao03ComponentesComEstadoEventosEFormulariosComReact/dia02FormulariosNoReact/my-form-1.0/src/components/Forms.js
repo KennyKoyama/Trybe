@@ -1,23 +1,28 @@
 import React, { Component } from 'react';
 import Checkbox from './inputs/Checkbox';
+import Files from './inputs/Files';
 import Radio from './inputs/Radio';
 import Select from './inputs/Select';
 import TextArea from './inputs/TextArea';
 
+const INITIAL_STATE = {
+  select: 'option1',
+  radio: 'radio1',
+  textarea: '',
+  checkbox1: false,
+  checkbox2: false,
+  isDisable: true,
+}
+
 class Forms extends Component {
   state = {
-    select: 'option1',
-    radio: '',
-    textarea: '',
-    checkbox1: '',
-    checkbox2: '',
-    isDisable: true,
+    ...INITIAL_STATE,
     submitted: [],
   };
 
   validate = () => {
     const { radio, textarea, checkbox1, checkbox2 } = this.state;
-    const isValid = radio && textarea.length > 5 && checkbox1 && checkbox2;
+    const isValid = textarea.length > 5 && checkbox1;
     this.setState({ isDisable: !isValid });
   };
 
@@ -27,7 +32,7 @@ class Forms extends Component {
     event.preventDefault();
     const { select, radio, textarea, checkbox1, checkbox2 } = this.state;
     const newSub = { select, radio, textarea, checkbox1, checkbox2 };
-    this.setState(({ submitted }) => ({ submitted: [...submitted, newSub] }));
+    this.setState(({ submitted }) => ({ ...INITIAL_STATE, submitted: [...submitted, newSub] }));
   };
 
   render() {
@@ -41,6 +46,7 @@ class Forms extends Component {
           <Radio radioState={radio} updateState={this.updateState} />
           <TextArea textareaState={textarea} updateState={this.updateState} />
           <Checkbox checkboxState={{checkbox1, checkbox2}} updateState={this.updateState} />
+          <Files />
         </fieldset>
         <button type='submit' disabled={isDisable}>Enviar</button>
       </form>
