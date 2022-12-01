@@ -21,7 +21,7 @@ class Forms extends Component {
   };
 
   validate = () => {
-    const { radio, textarea, checkbox1, checkbox2 } = this.state;
+    const { textarea, checkbox1 } = this.state;
     const isValid = textarea.length > 5 && checkbox1;
     this.setState({ isDisable: !isValid });
   };
