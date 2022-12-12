@@ -1,38 +1,32 @@
 import React from 'react';
+import Joke from './Joke';
 
 class DadJoke extends React.Component {
-  async fetchJoke() {
-    const { updateState } = this.props;
-    const requestHeaders = { headers: { Accept: 'application/json' } }
-    const requestReturn = await fetch('https://icanhazdadjoke.com/', requestHeaders)
-    const requestObject = await requestReturn.json();
-    updateState('dadJokes', 'jokeObj', requestObject, 'loading', true);
-    this.saveJoke()
-  }
+  // async fetchJoke() {
+  //   const { updateState } = this.props;
+  //   const newFetch = async () => {
+  //     const requestHeaders = { headers: { Accept: 'application/json' } }
+  //     const requestReturn = await fetch('https://icanhazdadjoke.com/', requestHeaders)
+  //     const requestObject = await requestReturn.json();
+  //     updateState('loading', false)
+  //     updateState('jokeObj', requestObject);
+  //   }
+  //   updateState('loading', true, newFetch)
+  // }
   
-  componentDidMount() {
-    const { updateState } = this.props;
-    // updateState('dadJokes', 'loading', true);
-    this.fetchJoke();
-    // updateState('dadJokes', 'loading', false);
-  }
-
-  saveJoke() {
-    // Esse método será responsável por salvar a piada no array de piadas storedJokes!!
-    const { dadJokes, dadJokes: { jokeObj, loading,  storedJokes }, updateState } = this.props;
-    if (jokeObj) {
-      updateState('dadJokes', 'storedJokes', [...storedJokes, jokeObj], 'loading', false);
-      // console.log('SAVED')
-    }
-  }
+  // componentDidMount() {
+  //   const { fetchJoke } = this.props;
+  //   fetchJoke();
+  // }
 
   render() {
-    const { dadJokes, dadJokes: { jokeObj, loading, storedJokes } } = this.props;
+    const { dadJokes: { jokeObj, loading, storedJokes }, saveJoke } = this.props;
     const loadingElement = <span>Loading...</span>;
-    console.log('STORED JOKES', storedJokes)
+    // console.log('STORED JOKES', storedJokes)
 
     return (
       <div>
+        <h1>Dad Jokes</h1>
         <span>
           {storedJokes.map(({ id, joke }) => (<p key={id}>{joke}</p>))}
         </span>
@@ -45,7 +39,7 @@ class DadJoke extends React.Component {
 
         <p>RENDERIZAÇÃO CONDICIONAL</p>
         */
-        loading && loadingElement
+        loading ? loadingElement : <Joke jokeObj={jokeObj} saveJoke={saveJoke} />
       }
 
       </div>

@@ -6,7 +6,7 @@ class RickMorty extends Component {
     fetch('https://rickandmortyapi.com/api/character')
     .then(response => response.json())
     .then((data) => {
-      updateState('rickMorty', 'characters', data.results)
+      updateState('characters', data.results)
     })
   }
 
@@ -15,7 +15,7 @@ class RickMorty extends Component {
   }
 
   render() {
-    const { rickMorty: { characters } } = this.props;
+    const { characters } = this.props;
     return (
       <div className="RickMorty">
         <h1>Ricky and Morty Characters:</h1>
