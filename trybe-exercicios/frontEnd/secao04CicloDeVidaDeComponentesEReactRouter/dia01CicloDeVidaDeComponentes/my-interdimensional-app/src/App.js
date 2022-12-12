@@ -1,28 +1,36 @@
 import React, { Component } from 'react';
 import './App.css';
+import DadJoke from './components/DadJoke';
+import RickMorty from './components/RickMorty';
 
 class App extends Component {
   constructor(props){
     super(props);
     this.state = {
-        characters: [],
+        rickMorty: { characters: [] },
+        dadJokes: {
+          jokeObj: undefined,
+          loading: true,
+          storedJokes: [],
+        },
     };
   }
 
-  fetchCharacters = () => {
-    fetch('https://rickandmortyapi.com/api/character')
-    .then(response => response.json())
-    .then(data => {
-      this.setState({characters: data.results})
-    })
-  }
+  updateState = (key, sub, value) => this.setState((prev) => ({ [key]: {...prev[key], [sub]: value } }))
+  updateState2 = (key, sub, value, sub2, value2) => this.setState((prev) => ({ [key]: {...prev[key], [sub]: value, [sub2]: value2 } }))
 
   render() {
+    const { rickMorty, dadJokes } = this.state;
     return (
       <div className="App">
-        <h1>
-          Ricky and Morty Characters:
-        </h1>
+        {/* <RickMorty
+          rickMorty={ rickMorty }
+          updateState={ this.updateState }
+        /> */}
+        <DadJoke
+          dadJokes={ dadJokes }
+          updateState={ this.updateState2 }
+        />
       </div>
     );
   }
