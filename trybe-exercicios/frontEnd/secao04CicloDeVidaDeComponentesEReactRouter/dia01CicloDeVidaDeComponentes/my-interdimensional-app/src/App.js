@@ -11,12 +11,10 @@ class App extends Component {
     };
   }
 
-  updateState = (key, value, second) => this.setState({ [key]: value });
-
-
+  updateState = (key, value ) => this.setState({ [key]: value });
 
   render() {
-    const { characters, jokeObj, loading, storedJokes } = this.state;
+    const { characters } = this.state;
     return (
       <div className="App">
         <DadJoke />
