@@ -8,6 +8,12 @@ function App() {
   const lastName = useFormInput('');
   const email = useFormInput('');
 
+  function clearInputs() {
+    firstName.clearInput()
+    lastName.clearInput()
+    email.clearInput()
+  }
+
   function handleSubmit(e) {
     e.preventDefault();
 
@@ -20,10 +26,7 @@ function App() {
       }),
       'success'
     );
-
-    firstName.clearInput()
-    lastName.clearInput()
-    email.clearInput()
+    clearInputs()
   }
 
   return (
