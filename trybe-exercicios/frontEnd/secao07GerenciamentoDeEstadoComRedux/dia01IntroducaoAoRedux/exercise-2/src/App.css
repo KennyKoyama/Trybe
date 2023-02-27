@@ -1,0 +1,36 @@
+.container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  font-family: sans-serif;
+  gap: 1rem;
+  height: 100vh;
+  justify-content: center;
+  text-align: center;
+}
+
+.light {
+  background-color: white;
+  color: black;
+}
+
+.dark {
+  background-color: black;
+  color: white;
+}
+
+.online {
+  color: chartreuse;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.offline {
+  color: crimson;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+button {
+  padding: 0.5rem 1rem;
+}
