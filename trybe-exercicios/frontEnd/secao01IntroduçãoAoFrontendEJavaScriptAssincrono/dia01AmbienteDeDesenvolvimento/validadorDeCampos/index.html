@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Validador de Campos</title>
+  </head>
+  <body>
+    <main>
+      <h1>Validador de Campos</h1>
+      <form action="">
+        <section>
+          <input type="text" name="text-input" id="text-input">
+          <select name="dropdown" id="dropdown">
+            <option value="isEmail">is email</option>
+            <option value="isNumeric">is numeric</option>
+            <option value="isDate">is date</option>
+            <option value="isLowercase">is lowercase</option>
+            <option value="isUppercase">is uppercase</option>
+          </select>
+        </section>
+        <input type="button" value="Validate!" id="validate-btn">
+      </form>
+      <h3 id="result"></h3>
+    </main>
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>
