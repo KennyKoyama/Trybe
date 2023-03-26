@@ -1,0 +1,9 @@
+version: '3'
+services:
+  server:
+    image: httpd:2.4.54
+    ports:
+      - 4545:80
+    restart: always
+    volumes:
+      - ./:/usr/local/apache2/htdocs/
