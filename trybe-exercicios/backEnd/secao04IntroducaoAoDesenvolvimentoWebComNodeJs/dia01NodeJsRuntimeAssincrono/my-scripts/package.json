@@ -8,5 +8,8 @@
     "bmi": "node bmi.js"
   },
   "author": "Kenny Koyama",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "readline-sync": "1.4.10"
+  }
 }
