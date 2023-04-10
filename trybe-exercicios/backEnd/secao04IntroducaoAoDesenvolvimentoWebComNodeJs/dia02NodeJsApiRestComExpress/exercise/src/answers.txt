@@ -1,0 +1,9 @@
+Exercício 1
+Qual é a função do código de status 400 e 422?
+  - 400 Bad Request: The server cannot or will not process the request due to something that is perceived to be a client error (e.g., malformed request syntax, invalid request message framing, or deceptive request routing).
+  - 422 Unprocessable Content: The request was well-formed but was unable to be followed due to semantic errors.
+
+
+Exercício 2
+Qual é a função do código de status 401?
+  - 401 Unauthorized: Although the HTTP standard specifies "unauthorized", semantically this response means "unauthenticated". That is, the client must authenticate itself to get the requested response.
