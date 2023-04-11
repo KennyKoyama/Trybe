@@ -1,3 +1,5 @@
+// EXERCÍCIOS POR ORDEM DE PRIORIDADE DE ROTA
+
 // 🚀 Exercício 3
 // Crie um servidor Node.js utilizando o framework Express.
 const fs = require('fs').promises;
@@ -15,15 +17,6 @@ async function readJSON() {
     console.error(`Erro ao ler o arquivo: ${err.message}`);
   };
 };
-
-// 🚀 Exercício 5
-// Crie um endpoint do tipo GET com a rota /movies/:id, que possa listar um filme do JSON por id.
-app.get('/movies/:id', (req, res) => {
-  const { id } = req.params;
-  readJSON()
-    .then(movies => res.status(200).json(movies.find(movie => movie.id == id)))
-    .catch(err => console.log(err.message));
-})
 
 // 🚀 Exercício 6
 // Crie um endpoint do tipo GET com a rota /movies, que possa listar todos os filmes do JSON.
@@ -49,6 +42,30 @@ app.post('/movies', (req, res) => {
     })
     .catch(err => console.log(err.message));
 });
+
+// 🚀 Exercício 10
+// Crie um endpoint do tipo GET com a rota /movies/search, que possa listar todos os filmes do JSON.
+// A rota deve receber a informação por query e a chave deve-se chamar q. A chave vai trazer consigo valor de ‘gente’ por exemplo, e o filtro deve trazer apenas os filmes com esse termo, se não encontrar, traga um array vazio.
+app.get('/movies/search', (req, res) => {
+  const { q } = req.query;
+  readJSON()
+    .then(movies => {
+      const result = movies.filter(({ movie }) => movie.includes(q));
+      console.log(result)
+      res.status(200).json(result);
+    })
+    .catch(err => res.status(404).send(err.message));
+});
+
+// 🚀 Exercício 5
+// Crie um endpoint do tipo GET com a rota /movies/:id, que possa listar um filme do JSON por id.
+app.get('/movies/:id', (req, res) => {
+  const { id } = req.params;
+  readJSON()
+    .then(movies => res.status(200).json(movies.find(movie => movie.id == id)))
+    .catch(err => console.log(err.message));
+})
+
 
 // 🚀 Exercício 8
 // Crie um endpoint do tipo PUT com a rota / movies /: id, que possa editar informações de um filme do JSON.
