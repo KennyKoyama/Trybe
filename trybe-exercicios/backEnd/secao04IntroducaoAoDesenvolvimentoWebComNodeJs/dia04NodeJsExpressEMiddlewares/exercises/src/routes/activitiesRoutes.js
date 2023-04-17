@@ -2,14 +2,14 @@ const express = require('express');
 const existingActivity = require('../middlewares/existingActivity');
 const validateActivity = require('../middlewares/validateActivity');
 const getDB = require('../utils/getDB');
-const getBy = require('../utils/getBy');
+const getByID = require('../utils/getByID');
 const addContent = require('../utils/addContent');
 const editContent = require('../utils/editContent');
 const deleteContent = require('../utils/deleteContent');
 const validateEditData = require('../middlewares/validateEditData');
 const { ACTIVITIES_PATH } = require('../configs/PATHS');
 
-const activitiesRoutes = express();
+const activitiesRoutes = express.Router();
 
 // GET ALL
 activitiesRoutes.get('/', async (_req, res) => {
@@ -20,29 +20,21 @@ activitiesRoutes.get('/', async (_req, res) => {
 // GET SINGLE
 activitiesRoutes.get('/:id', existingActivity, async (req, res) => {
   const { id } = req.params;
-  const activity = await getBy(ACTIVITIES_PATH, id);
+  const activity = await getByID(ACTIVITIES_PATH, id);
   res.status(200).json( { activity } );
 });
 
-// {
-//   "name": "Trekking",
-//   "price": 0,
-//   "description": {
-//     "rating": 5,
-//     "difficulty": "Fácil",
-//     "createdAt": "10/08/2022"
-//   }
-// }
 // ADD
 activitiesRoutes.post('/', validateActivity, async (req, res) => {
   const { name, price, rating, difficulty } = req.body;
+  const currDate = new Date();
   const newActivity = {
     name,
     price,
     description: {
       rating,
       difficulty,
-      createdAt: new Date(),
+      createdAt: `${currDate.getDate()}/${currDate.getMonth() + 1}/${currDate.getFullYear()}`,
     },
   };
   addContent(ACTIVITIES_PATH, newActivity);

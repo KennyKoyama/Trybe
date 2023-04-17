@@ -1,16 +1,8 @@
 {
   "dGlqb2xvMjIK": {
-    "appId": 1,
-    "teams": [
-      "SAO",
-      "PAL"
-    ]
+    "appId": 1
   },
   "bDRkcjFsaDAK": {
-    "appId": 2,
-    "teams": [
-      "FLA",
-      "FLU"
-    ]
+    "appId": 2
   }
 }
